@@ -1,6 +1,7 @@
 ```html
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,43 +13,137 @@
 
 <body>
 
-<!-- ================= INTRO SCREEN ================= -->
+<!-- =====================================================
+     CYBERSECURITY BOOT / PRESENTATION SCREEN
+===================================================== -->
+
 <div id="introScreen">
+
+    <div class="matrix-bg"></div>
     <div class="cyber-grid"></div>
     <div class="scanlines"></div>
+    <div class="noise"></div>
+
+    <div class="intro-radar">
+        <div class="radar-line"></div>
+        <div class="radar-circle radar-one"></div>
+        <div class="radar-circle radar-two"></div>
+        <div class="radar-circle radar-three"></div>
+    </div>
+
+    <div class="threat-line threat-one">
+        <span>THREAT_LEVEL: 0</span>
+        <span>STATUS: MONITORING</span>
+    </div>
+
+    <div class="threat-line threat-two">
+        <span>NETWORK: SECURE</span>
+        <span>FIREWALL: ACTIVE</span>
+    </div>
 
     <div class="intro-content">
 
-        <div class="security-icon">
-            <div class="shield">⌬</div>
+        <div class="cyber-badge">
+
+            <div class="badge-corners"></div>
+
+            <div class="lock-icon">
+                <div class="lock-body">
+                    <div class="lock-keyhole"></div>
+                </div>
+
+                <div class="lock-shackle"></div>
+            </div>
+
+            <div class="badge-ring"></div>
+
         </div>
 
-        <div class="intro-label">SECURITY SYSTEM</div>
-
-        <h1>
-            <span>AHMED</span> KHADER
-        </h1>
-
-        <div class="intro-status">
-            <p>[01] INITIALIZING SECURITY CORE...</p>
-            <p>[02] LOADING NETWORK MODULES...</p>
-            <p>[03] VERIFYING SYSTEM INTEGRITY...</p>
-            <p class="granted">[04] ACCESS GRANTED ✓</p>
+        <div class="intro-classification">
+            CYBERSECURITY OPERATIONS CENTER
         </div>
 
-        <div class="progress-container">
-            <div class="progress-bar"></div>
+        <div class="intro-title">
+            <span>SECURE</span>
+            <strong>ACCESS</strong>
         </div>
 
-        <div class="access-text">
-            SYSTEM READY
+        <div class="intro-subtitle">
+            INITIALIZING AHMED KHADER SECURITY ENVIRONMENT
+        </div>
+
+        <div class="security-console">
+
+            <div class="console-row">
+                <span class="console-number">01</span>
+                <span class="console-command">
+                    INITIALIZING SECURITY CORE
+                </span>
+                <span class="console-status">[OK]</span>
+            </div>
+
+            <div class="console-row">
+                <span class="console-number">02</span>
+                <span class="console-command">
+                    ANALYZING NETWORK MODULES
+                </span>
+                <span class="console-status">[OK]</span>
+            </div>
+
+            <div class="console-row">
+                <span class="console-number">03</span>
+                <span class="console-command">
+                    VERIFYING FIREWALL INTEGRITY
+                </span>
+                <span class="console-status">[OK]</span>
+            </div>
+
+            <div class="console-row">
+                <span class="console-number">04</span>
+                <span class="console-command">
+                    LOADING THREAT DETECTION ENGINE
+                </span>
+                <span class="console-status">[OK]</span>
+            </div>
+
+            <div class="console-row">
+                <span class="console-number">05</span>
+                <span class="console-command">
+                    ESTABLISHING SECURE SESSION
+                </span>
+                <span class="console-status granted">[GRANTED]</span>
+            </div>
+
+        </div>
+
+        <div class="boot-progress">
+
+            <div class="boot-progress-label">
+                <span>SECURITY INITIALIZATION</span>
+                <span>100%</span>
+            </div>
+
+            <div class="boot-progress-track">
+                <div class="boot-progress-bar"></div>
+            </div>
+
+        </div>
+
+        <div class="access-granted">
+            <span class="access-symbol">◆</span>
+            SECURE CONNECTION ESTABLISHED
+            <span class="access-symbol">◆</span>
         </div>
 
     </div>
+
 </div>
 
 
-<!-- ================= NAVBAR ================= -->
+<!-- =====================================================
+     NAVBAR
+===================================================== -->
+
 <header class="navbar">
 
     <div class="logo">
@@ -56,25 +151,74 @@
     </div>
 
     <nav>
-        <a href="#about" data-en="About" data-ar="نبذة">About</a>
-        <a href="#academic" data-en="Academic" data-ar="الدراسة">Academic</a>
-        <a href="#skills" data-en="Skills" data-ar="المهارات">Skills</a>
-        <a href="#projects" data-en="Projects" data-ar="المشاريع">Projects</a>
-        <a href="#journey" data-en="Journey" data-ar="المسيرة">Journey</a>
-        <a href="#contact" data-en="Contact" data-ar="تواصل">Contact</a>
+
+        <a href="#about"
+           data-en="About"
+           data-ar="نبذة عني">
+            About
+        </a>
+
+        <a href="#academic"
+           data-en="Academic"
+           data-ar="الدراسة">
+            Academic
+        </a>
+
+        <a href="#skills"
+           data-en="Skills"
+           data-ar="المهارات">
+            Skills
+        </a>
+
+        <a href="#projects"
+           data-en="Projects"
+           data-ar="المشاريع">
+            Projects
+        </a>
+
+        <a href="#journey"
+           data-en="Journey"
+           data-ar="المسيرة">
+            Journey
+        </a>
+
+        <a href="#contact"
+           data-en="Contact"
+           data-ar="تواصل">
+            Contact
+        </a>
+
     </nav>
 
-    <button id="languageBtn" class="language-btn">
+    <button id="languageBtn"
+            class="language-btn"
+            aria-label="Change Language">
         AR
     </button>
 
 </header>
 
 
-<!-- ================= HERO ================= -->
+<!-- =====================================================
+     HERO
+===================================================== -->
+
 <section class="hero">
 
     <div class="hero-background"></div>
+
+    <div class="hero-network">
+
+        <div class="network-node node-one"></div>
+        <div class="network-node node-two"></div>
+        <div class="network-node node-three"></div>
+        <div class="network-node node-four"></div>
+
+        <div class="network-line line-one"></div>
+        <div class="network-line line-two"></div>
+        <div class="network-line line-three"></div>
+
+    </div>
 
     <div class="hero-content">
 
@@ -92,36 +236,58 @@
         </h1>
 
         <p class="hero-description">
-            Building software, exploring networks,
-            and developing cybersecurity skills.
+            Cybersecurity student focused on software development,
+            computer networks, Linux, system security and practical
+            cybersecurity technologies.
         </p>
 
         <div class="hero-buttons">
-            <a href="#projects" class="btn primary">
+
+            <a href="#projects"
+               class="btn primary"
+               data-en="Explore Projects"
+               data-ar="استكشف المشاريع">
                 Explore Projects
             </a>
 
-            <a href="#contact" class="btn secondary">
+            <a href="#contact"
+               class="btn secondary"
+               data-en="Contact Me"
+               data-ar="تواصل معي">
                 Contact Me
             </a>
+
         </div>
 
     </div>
 
     <div class="scroll-indicator">
-        <span>SCROLL TO EXPLORE</span>
+        <span data-en="SCROLL TO EXPLORE"
+              data-ar="مرر للاستكشاف">
+            SCROLL TO EXPLORE
+        </span>
+
         <div></div>
     </div>
 
 </section>
 
 
-<!-- ================= ABOUT ================= -->
+<!-- =====================================================
+     ABOUT
+===================================================== -->
+
 <section id="about" class="section">
 
     <div class="section-title">
+
         <span>01</span>
-        <h2>About Me</h2>
+
+        <h2 data-en="About Me"
+            data-ar="نبذة عني">
+            About Me
+        </h2>
+
     </div>
 
     <div class="about-grid">
@@ -129,45 +295,73 @@
         <div class="about-text">
 
             <h3>
-                Hello, I'm <span>Ahmed</span>.
+                <span data-en="Hello, I'm"
+                      data-ar="مرحباً، أنا">
+                    Hello, I'm
+                </span>
+
+                <span>Ahmed</span>.
             </h3>
 
-            <p>
-                I am a Cybersecurity student and software developer
-                interested in programming, computer networks,
-                system security and practical technology.
+            <p data-en="I am a first-year Cybersecurity student and software developer interested in programming, computer networks, Linux, system security and practical technology."
+               data-ar="أنا طالب سنة أولى في تخصص الأمن السيبراني ومطور برمجيات، مهتم بالبرمجة وشبكات الحاسوب وأنظمة Linux وأمن الأنظمة والتقنيات العملية.">
+                I am a first-year Cybersecurity student and software
+                developer interested in programming, computer networks,
+                Linux, system security and practical technology.
             </p>
 
-            <p>
-                I enjoy turning ideas into functional software
-                and learning how systems communicate, operate
-                and can be protected.
+            <p data-en="I enjoy turning ideas into functional software and learning how systems communicate, operate and can be protected."
+               data-ar="أستمتع بتحويل الأفكار إلى برامج عملية، وتعلم كيفية عمل الأنظمة وتواصلها وكيفية حمايتها.">
+                I enjoy turning ideas into functional software and
+                learning how systems communicate, operate and can be protected.
             </p>
 
         </div>
 
+
         <div class="terminal-card">
 
             <div class="terminal-header">
+
                 <span></span>
                 <span></span>
                 <span></span>
+
             </div>
 
             <div class="terminal-body">
-                <p><span class="green">user@ahmed</span>:~$ whoami</p>
+
+                <p>
+                    <span class="green">user@ahmed</span>:~$ whoami
+                </p>
+
                 <p>Ahmed Khader</p>
 
-                <p><span class="green">user@ahmed</span>:~$ role</p>
+                <p>
+                    <span class="green">user@ahmed</span>:~$ role
+                </p>
+
                 <p>Cybersecurity Student</p>
 
-                <p><span class="green">user@ahmed</span>:~$ focus</p>
-                <p>Security • Networks • Programming</p>
+                <p>
+                    <span class="green">user@ahmed</span>:~$ year
+                </p>
+
+                <p>First Year University Student</p>
+
+                <p>
+                    <span class="green">user@ahmed</span>:~$ focus
+                </p>
+
+                <p>
+                    Security • Networks • Programming • Linux
+                </p>
 
                 <p>
                     <span class="green">user@ahmed</span>:~$
                     <span class="cursor">█</span>
                 </p>
+
             </div>
 
         </div>
@@ -177,44 +371,130 @@
 </section>
 
 
-<!-- ================= ACADEMIC ================= -->
+<!-- =====================================================
+     ACADEMIC
+===================================================== -->
+
 <section id="academic" class="section dark-section">
 
     <div class="section-title">
+
         <span>02</span>
-        <h2>Academic Foundation</h2>
+
+        <h2 data-en="Academic Foundation"
+            data-ar="الأساس الأكاديمي">
+            Academic Foundation
+        </h2>
+
     </div>
+
 
     <div class="cards">
 
         <div class="info-card">
+
             <div class="card-number">01</div>
-            <h3>Cybersecurity</h3>
-            <p>
-                Studying cybersecurity concepts,
-                security principles and practical
-                defensive techniques.
+
+            <h3 data-en="Cybersecurity"
+                data-ar="الأمن السيبراني">
+                Cybersecurity
+            </h3>
+
+            <p data-en="Studying cybersecurity concepts, security principles, system protection and practical defensive techniques."
+               data-ar="دراسة مفاهيم الأمن السيبراني ومبادئ الحماية وأمن الأنظمة والتقنيات الدفاعية العملية.">
+                Studying cybersecurity concepts, security principles,
+                system protection and practical defensive techniques.
             </p>
+
         </div>
 
+
         <div class="info-card">
+
             <div class="card-number">02</div>
-            <h3>Computer Networks</h3>
-            <p>
-                Learning networking, protocols,
-                routing, addressing, packet analysis
-                and network architecture.
+
+            <h3 data-en="Computer Networks"
+                data-ar="شبكات الحاسوب">
+                Computer Networks
+            </h3>
+
+            <p data-en="Learning networking, protocols, routing, addressing, packet analysis and network architecture."
+               data-ar="تعلم الشبكات والبروتوكولات والتوجيه والعناوين وتحليل الحزم وتصميم بنية الشبكات.">
+                Learning networking, protocols, routing, addressing,
+                packet analysis and network architecture.
             </p>
+
         </div>
 
+
         <div class="info-card">
+
             <div class="card-number">03</div>
-            <h3>Programming</h3>
-            <p>
-                Building projects using Java,
-                Python and object-oriented
-                programming concepts.
+
+            <h3 data-en="Programming"
+                data-ar="البرمجة">
+                Programming
+            </h3>
+
+            <p data-en="Building projects using Java, Python and object-oriented programming concepts."
+               data-ar="بناء مشاريع باستخدام Java وPython ومفاهيم البرمجة كائنية التوجه.">
+                Building projects using Java, Python and
+                object-oriented programming concepts.
             </p>
+
+        </div>
+
+
+        <div class="info-card">
+
+            <div class="card-number">04</div>
+
+            <h3>Kali Linux</h3>
+
+            <p data-en="Practical experience with Kali Linux, terminal commands, networking tools and cybersecurity laboratory environments."
+               data-ar="معرفة عملية بنظام Kali Linux وأوامر الطرفية وأدوات الشبكات وبيئات مختبرات الأمن السيبراني.">
+                Practical experience with Kali Linux,
+                terminal commands, networking tools and
+                cybersecurity laboratory environments.
+            </p>
+
+        </div>
+
+
+        <div class="info-card">
+
+            <div class="card-number">05</div>
+
+            <h3 data-en="Windows Command Line"
+                data-ar="Windows Command Line">
+                Windows Command Line
+            </h3>
+
+            <p data-en="Working with Windows CMD commands, system information, networking commands and basic system administration tasks."
+               data-ar="التعامل مع أوامر Windows CMD ومعلومات النظام وأوامر الشبكات وبعض مهام إدارة النظام الأساسية.">
+                Working with Windows CMD commands, system information,
+                networking commands and basic system administration tasks.
+            </p>
+
+        </div>
+
+
+        <div class="info-card">
+
+            <div class="card-number">06</div>
+
+            <h3 data-en="University Student"
+                data-ar="طالب جامعي">
+                University Student
+            </h3>
+
+            <p data-en="First-year university student continuously developing technical and cybersecurity skills through academic and practical projects."
+               data-ar="طالب سنة أولى في الجامعة، أعمل باستمرار على تطوير مهاراتي التقنية والأمن السيبراني من خلال الدراسة والمشاريع العملية.">
+                First-year university student continuously developing
+                technical and cybersecurity skills through academic
+                and practical projects.
+            </p>
+
         </div>
 
     </div>
@@ -222,74 +502,155 @@
 </section>
 
 
-<!-- ================= SKILLS ================= -->
+<!-- =====================================================
+     SKILLS
+===================================================== -->
+
 <section id="skills" class="section">
 
     <div class="section-title">
+
         <span>03</span>
-        <h2>Technical Skills</h2>
+
+        <h2 data-en="Technical Skills"
+            data-ar="المهارات التقنية">
+            Technical Skills
+        </h2>
+
     </div>
+
 
     <div class="skills-grid">
 
         <div class="skill">
+
             <div class="skill-info">
                 <span>Java</span>
                 <span>Proficient</span>
             </div>
+
             <div class="skill-line">
                 <div style="width:85%"></div>
             </div>
+
         </div>
 
+
         <div class="skill">
+
             <div class="skill-info">
                 <span>Python</span>
                 <span>Working Knowledge</span>
             </div>
+
             <div class="skill-line">
                 <div style="width:75%"></div>
             </div>
+
         </div>
 
+
         <div class="skill">
+
             <div class="skill-info">
                 <span>Computer Networks</span>
                 <span>Working Knowledge</span>
             </div>
+
             <div class="skill-line">
                 <div style="width:80%"></div>
             </div>
+
         </div>
 
+
         <div class="skill">
+
             <div class="skill-info">
                 <span>Git & GitHub</span>
                 <span>Working Knowledge</span>
             </div>
+
             <div class="skill-line">
                 <div style="width:70%"></div>
             </div>
+
         </div>
 
+
         <div class="skill">
+
             <div class="skill-info">
                 <span>Cybersecurity</span>
                 <span>Developing</span>
             </div>
+
             <div class="skill-line">
                 <div style="width:65%"></div>
             </div>
+
         </div>
 
+
         <div class="skill">
+
             <div class="skill-info">
                 <span>English</span>
                 <span>Good</span>
             </div>
+
             <div class="skill-line">
                 <div style="width:75%"></div>
             </div>
+
+        </div>
+
+
+        <!-- NEW: LINUX -->
+
+        <div class="skill">
+
+            <div class="skill-info">
+                <span>Linux</span>
+                <span>Working Knowledge</span>
+            </div>
+
+            <div class="skill-line">
+                <div style="width:72%"></div>
+            </div>
+
+        </div>
+
+
+        <!-- NEW: WIRESHARK -->
+
+        <div class="skill">
+
+            <div class="skill-info">
+                <span>Wireshark</span>
+                <span>Working Knowledge</span>
+            </div>
+
+            <div class="skill-line">
+                <div style="width:68%"></div>
+            </div>
+
+        </div>
+
+
+        <!-- NEW: NMAP -->
+
+        <div class="skill">
+
+            <div class="skill-info">
+                <span>Nmap</span>
+                <span>Working Knowledge</span>
+            </div>
+
+            <div class="skill-line">
+                <div style="width:70%"></div>
+            </div>
+
         </div>
 
     </div>
@@ -297,45 +658,74 @@
 </section>
 
 
-<!-- ================= PROJECTS ================= -->
+<!-- =====================================================
+     PROJECTS
+===================================================== -->
+
 <section id="projects" class="section dark-section">
 
     <div class="section-title">
+
         <span>04</span>
-        <h2>Projects</h2>
+
+        <h2 data-en="Projects"
+            data-ar="المشاريع">
+            Projects
+        </h2>
+
     </div>
+
 
     <div class="projects-grid">
 
+
         <!-- CONTACTS -->
+
         <article class="project-card">
 
             <div class="project-top">
-                <span class="project-type">JAVA</span>
-                <span class="project-icon">01</span>
+
+                <span class="project-type">
+                    JAVA
+                </span>
+
+                <span class="project-icon">
+                    01
+                </span>
+
             </div>
 
-            <h3>Contacts Communication System</h3>
 
-            <p>
+            <h3>
+                Contacts Communication System
+            </h3>
+
+
+            <p data-en="A Java-based Address Book system that allows users to add, search, delete and display contacts."
+               data-ar="نظام دفتر جهات اتصال مبني باستخدام Java يسمح بإضافة والبحث وحذف وعرض جهات الاتصال.">
                 A Java-based Address Book system that allows
                 users to add, search, delete and display contacts.
             </p>
 
+
             <div class="project-tags">
+
                 <span>Java</span>
                 <span>ArrayList</span>
                 <span>OOP</span>
+
             </div>
 
+
             <div class="project-actions">
+
                 <button class="run-btn"
-                        onclick="openDemo('contacts')">
+                        onclick="openDemoWindow('contacts')">
                     ▶ Run Demo
                 </button>
 
                 <button class="code-btn"
-                        onclick="openCode('contacts')">
+                        onclick="openCodeWindow('contacts')">
                     &lt;/&gt; View Code
                 </button>
 
@@ -343,42 +733,61 @@
                    target="_blank">
                     GitHub ↗
                 </a>
+
             </div>
 
         </article>
 
 
         <!-- AIRPORT -->
+
         <article class="project-card">
 
             <div class="project-top">
-                <span class="project-type">JAVA / OOP</span>
-                <span class="project-icon">02</span>
+
+                <span class="project-type">
+                    JAVA / OOP
+                </span>
+
+                <span class="project-icon">
+                    02
+                </span>
+
             </div>
 
-            <h3>Gaza International Airport System</h3>
 
-            <p>
+            <h3>
+                Gaza International Airport System
+            </h3>
+
+
+            <p data-en="An object-oriented airport management system handling passengers, flights, pilots, attendants, exceptions and flight logs."
+               data-ar="نظام لإدارة مطار باستخدام البرمجة كائنية التوجه، ويتعامل مع المسافرين والرحلات والطيارين وطاقم الطائرة والاستثناءات وسجلات الرحلات.">
                 An object-oriented airport management system
                 handling passengers, flights, pilots, attendants,
                 exceptions and flight logs.
             </p>
 
+
             <div class="project-tags">
+
                 <span>Java</span>
                 <span>OOP</span>
                 <span>Exceptions</span>
                 <span>File I/O</span>
+
             </div>
 
+
             <div class="project-actions">
+
                 <button class="run-btn"
-                        onclick="openDemo('airport')">
+                        onclick="openDemoWindow('airport')">
                     ▶ Run Demo
                 </button>
 
                 <button class="code-btn"
-                        onclick="openCode('airport')">
+                        onclick="openCodeWindow('airport')">
                     &lt;/&gt; View Code
                 </button>
 
@@ -386,33 +795,51 @@
                    target="_blank">
                     GitHub ↗
                 </a>
+
             </div>
 
         </article>
 
 
         <!-- NETWORK -->
+
         <article class="project-card">
 
             <div class="project-top">
-                <span class="project-type">CISCO</span>
-                <span class="project-icon">03</span>
+
+                <span class="project-type">
+                    CISCO
+                </span>
+
+                <span class="project-icon">
+                    03
+                </span>
+
             </div>
 
-            <h3>Medium Scale Network Design</h3>
 
-            <p>
+            <h3>
+                Medium Scale Network Design
+            </h3>
+
+
+            <p data-en="A Cisco Packet Tracer network design implementing multiple departments, routing, addressing, servers, DHCP and SSH."
+               data-ar="تصميم شبكة باستخدام Cisco Packet Tracer يتضمن عدة أقسام والتوجيه والعناوين والخوادم وDHCP وSSH.">
                 A Cisco Packet Tracer network design implementing
                 multiple departments, routing, addressing,
                 servers, DHCP and SSH.
             </p>
 
+
             <div class="project-tags">
+
                 <span>Cisco</span>
                 <span>Packet Tracer</span>
                 <span>Routing</span>
                 <span>DHCP</span>
+
             </div>
+
 
             <div class="project-actions">
 
@@ -428,37 +855,54 @@
 
 
         <!-- PYTHON -->
+
         <article class="project-card">
 
             <div class="project-top">
-                <span class="project-type">PYTHON</span>
-                <span class="project-icon">04</span>
+
+                <span class="project-type">
+                    PYTHON
+                </span>
+
+                <span class="project-icon">
+                    04
+                </span>
+
             </div>
 
-            <h3>Python Socket Programming</h3>
 
-            <p>
+            <h3>
+                Python Socket Programming
+            </h3>
+
+
+            <p data-en="A client-server socket application demonstrating TCP communication and remote command execution through Python."
+               data-ar="تطبيق Client-Server باستخدام Socket يوضح اتصال TCP وتنفيذ أوامر عن بعد باستخدام Python.">
                 A client-server socket application demonstrating
                 TCP communication and remote command execution
                 through Python.
             </p>
 
+
             <div class="project-tags">
+
                 <span>Python</span>
                 <span>TCP</span>
                 <span>Socket</span>
                 <span>Threading</span>
+
             </div>
+
 
             <div class="project-actions">
 
                 <button class="run-btn"
-                        onclick="openDemo('python')">
+                        onclick="openDemoWindow('python')">
                     ▶ Run Demo
                 </button>
 
                 <button class="code-btn"
-                        onclick="openCode('python')">
+                        onclick="openCodeWindow('python')">
                     &lt;/&gt; View Code
                 </button>
 
@@ -476,53 +920,128 @@
 </section>
 
 
-<!-- ================= JOURNEY ================= -->
+<!-- =====================================================
+     JOURNEY
+===================================================== -->
+
 <section id="journey" class="section">
 
     <div class="section-title">
+
         <span>05</span>
-        <h2>Learning Journey</h2>
+
+        <h2 data-en="Learning Journey"
+            data-ar="المسيرة التعليمية">
+            Learning Journey
+        </h2>
+
     </div>
+
 
     <div class="timeline">
 
+
         <div class="timeline-item">
+
             <div class="timeline-dot"></div>
 
             <div>
-                <span class="timeline-number">01</span>
-                <h3>Programming</h3>
-                <p>
+
+                <span class="timeline-number">
+                    01
+                </span>
+
+                <h3 data-en="Programming"
+                    data-ar="البرمجة">
+                    Programming
+                </h3>
+
+                <p data-en="Building a foundation in Java, Python and software development."
+                   data-ar="بناء أساس قوي في Java وPython وتطوير البرمجيات.">
                     Building a foundation in Java,
                     Python and software development.
                 </p>
+
             </div>
+
         </div>
 
+
         <div class="timeline-item">
+
             <div class="timeline-dot"></div>
 
             <div>
-                <span class="timeline-number">02</span>
-                <h3>Networking</h3>
-                <p>
+
+                <span class="timeline-number">
+                    02
+                </span>
+
+                <h3 data-en="Networking"
+                    data-ar="الشبكات">
+                    Networking
+                </h3>
+
+                <p data-en="Exploring computer networks, protocols, routing and packet analysis."
+                   data-ar="استكشاف شبكات الحاسوب والبروتوكولات والتوجيه وتحليل الحزم.">
                     Exploring computer networks,
                     protocols, routing and packet analysis.
                 </p>
+
             </div>
+
         </div>
 
+
         <div class="timeline-item">
+
             <div class="timeline-dot"></div>
 
             <div>
-                <span class="timeline-number">03</span>
-                <h3>Cybersecurity</h3>
-                <p>
+
+                <span class="timeline-number">
+                    03
+                </span>
+
+                <h3 data-en="Cybersecurity"
+                    data-ar="الأمن السيبراني">
+                    Cybersecurity
+                </h3>
+
+                <p data-en="Developing practical cybersecurity knowledge and defensive skills."
+                   data-ar="تطوير المعرفة العملية في الأمن السيبراني والمهارات الدفاعية.">
                     Developing practical cybersecurity
                     knowledge and defensive skills.
                 </p>
+
             </div>
+
+        </div>
+
+
+        <div class="timeline-item">
+
+            <div class="timeline-dot"></div>
+
+            <div>
+
+                <span class="timeline-number">
+                    04
+                </span>
+
+                <h3 data-en="Linux & Security Tools"
+                    data-ar="Linux وأدوات الأمن">
+                    Linux & Security Tools
+                </h3>
+
+                <p data-en="Learning Linux environments and practical tools such as Nmap and Wireshark."
+                   data-ar="تعلم بيئات Linux وأدوات عملية مثل Nmap وWireshark.">
+                    Learning Linux environments and practical
+                    tools such as Nmap and Wireshark.
+                </p>
+
+            </div>
+
         </div>
 
     </div>
@@ -530,46 +1049,76 @@
 </section>
 
 
-<!-- ================= CONTACT ================= -->
+<!-- =====================================================
+     CONTACT
+===================================================== -->
+
 <section id="contact" class="section contact-section">
 
     <div class="section-title">
+
         <span>06</span>
-        <h2>Contact</h2>
+
+        <h2 data-en="Contact"
+            data-ar="تواصل معي">
+            Contact
+        </h2>
+
     </div>
+
 
     <div class="contact-container">
 
-        <h3>Let's Connect.</h3>
+        <h3 data-en="Let's Connect."
+            data-ar="خلينا نتواصل.">
+            Let's Connect.
+        </h3>
 
-        <p>
+        <p data-en="Interested in technology, cybersecurity, software development or collaboration?"
+           data-ar="مهتم بالتكنولوجيا أو الأمن السيبراني أو تطوير البرمجيات أو التعاون؟">
             Interested in technology, cybersecurity,
             software development or collaboration?
         </p>
 
+
         <div class="contact-links">
 
             <a href="mailto:akhader@smail.ucas.edu.ps">
+
                 <span>Email</span>
+
                 akhader@smail.ucas.edu.ps
+
             </a>
+
 
             <a href="https://wa.me/972567937051"
                target="_blank">
+
                 <span>WhatsApp</span>
+
                 +972 56 793 7051
+
             </a>
+
 
             <a href="https://instagram.com/ahmad._.20073"
                target="_blank">
+
                 <span>Instagram</span>
+
                 @ahmad._.20073
+
             </a>
+
 
             <a href="https://github.com/CyberSec-Ahmed-Khader"
                target="_blank">
+
                 <span>GitHub</span>
+
                 CyberSec-Ahmed-Khader
+
             </a>
 
         </div>
@@ -579,7 +1128,10 @@
 </section>
 
 
-<!-- ================= FOOTER ================= -->
+<!-- =====================================================
+     FOOTER
+===================================================== -->
+
 <footer>
 
     <div class="footer-logo">
@@ -595,93 +1147,6 @@
     </p>
 
 </footer>
-
-
-<!-- ================= DEMO MODAL ================= -->
-<div id="runModal" class="modal">
-
-    <div class="modal-window terminal-window">
-
-        <div class="modal-header">
-
-            <div class="terminal-buttons">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-
-            <span id="modalTitle">
-                PROJECT TERMINAL
-            </span>
-
-            <button onclick="closeModal()">
-                ×
-            </button>
-
-        </div>
-
-        <div class="terminal-output-wrapper">
-
-            <pre id="terminalOutput"></pre>
-
-        </div>
-
-        <div class="modal-footer">
-
-            <button class="modal-close"
-                    onclick="closeModal()">
-                Close
-            </button>
-
-            <button class="modal-run"
-                    onclick="rerunDemo()">
-                ▶ Run Again
-            </button>
-
-        </div>
-
-    </div>
-
-</div>
-
-
-<!-- ================= CODE MODAL ================= -->
-<div id="codeModal" class="modal">
-
-    <div class="modal-window code-window">
-
-        <div class="modal-header">
-
-            <div class="terminal-buttons">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-
-            <span id="codeTitle">
-                SOURCE CODE
-            </span>
-
-            <button onclick="closeCode()">
-                ×
-            </button>
-
-        </div>
-
-        <pre id="codeOutput"></pre>
-
-        <div class="modal-footer">
-
-            <button class="modal-close"
-                    onclick="closeCode()">
-                Close
-            </button>
-
-        </div>
-
-    </div>
-
-</div>
 
 
 <script src="script.js"></script>
