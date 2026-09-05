@@ -11,6 +11,10 @@
 
     <style>
 
+        /* =========================
+           Global
+        ========================== */
+
         * {
             margin: 0;
             padding: 0;
@@ -35,19 +39,22 @@
 
         /* =========================
            Navigation
-        ========================= */
+        ========================== */
 
         nav {
             position: fixed;
             top: 0;
             left: 0;
             width: 100%;
+
             padding: 18px 8%;
+
             display: flex;
             justify-content: space-between;
             align-items: center;
 
-            background: rgba(10, 15, 13, 0.9);
+            background: rgba(10, 15, 13, 0.92);
+
             border-bottom: 1px solid #1f3d2d;
 
             backdrop-filter: blur(10px);
@@ -59,6 +66,7 @@
             font-size: 22px;
             font-weight: bold;
             color: #00ff88;
+            font-family: monospace;
         }
 
         .nav-links {
@@ -77,8 +85,8 @@
         }
 
         /* =========================
-           Hero Section
-        ========================= */
+           Hero
+        ========================== */
 
         .hero {
             min-height: 100vh;
@@ -86,11 +94,18 @@
             display: flex;
             align-items: center;
 
-            padding: 100px 8% 60px;
+            padding: 120px 8% 80px;
+
+            background:
+                radial-gradient(
+                    circle at 80% 30%,
+                    rgba(0, 255, 136, 0.08),
+                    transparent 30%
+                );
         }
 
         .hero-content {
-            max-width: 850px;
+            max-width: 900px;
         }
 
         .terminal {
@@ -104,7 +119,7 @@
         }
 
         .hero h1 {
-            font-size: clamp(42px, 7vw, 80px);
+            font-size: clamp(45px, 7vw, 85px);
 
             line-height: 1.1;
 
@@ -116,7 +131,7 @@
         }
 
         .hero h2 {
-            font-size: 26px;
+            font-size: 27px;
 
             color: #b8cfc2;
 
@@ -126,7 +141,7 @@
         }
 
         .hero p {
-            max-width: 700px;
+            max-width: 750px;
 
             color: #91a99b;
 
@@ -137,7 +152,7 @@
 
         /* =========================
            Buttons
-        ========================= */
+        ========================== */
 
         .buttons {
             display: flex;
@@ -148,11 +163,11 @@
         }
 
         .btn {
-            padding: 12px 22px;
+            padding: 12px 23px;
 
             border: 1px solid #00ff88;
 
-            border-radius: 6px;
+            border-radius: 7px;
 
             transition: 0.3s;
         }
@@ -178,10 +193,10 @@
 
         /* =========================
            Sections
-        ========================= */
+        ========================== */
 
         section {
-            padding: 90px 8%;
+            padding: 95px 8%;
         }
 
         .section-title {
@@ -197,14 +212,14 @@
         .section-description {
             color: #91a99b;
 
-            max-width: 700px;
+            max-width: 750px;
 
             margin-bottom: 40px;
         }
 
         /* =========================
-           Cards
-        ========================= */
+           General Card
+        ========================== */
 
         .card {
             background: #0e1712;
@@ -214,11 +229,86 @@
             border-radius: 12px;
 
             padding: 30px;
+
+            transition: 0.3s;
+        }
+
+        .card:hover {
+            border-color: #00ff88;
+        }
+
+        /* =========================
+           About
+        ========================== */
+
+        .about-text {
+            color: #b8cfc2;
+
+            font-size: 17px;
+
+            max-width: 900px;
+        }
+
+        .highlight {
+            color: #00ff88;
+            font-weight: bold;
+        }
+
+        /* =========================
+           Academic Foundation
+        ========================== */
+
+        .academic-grid {
+            display: grid;
+
+            grid-template-columns:
+                repeat(3, 1fr);
+
+            gap: 20px;
+        }
+
+        .academic-card {
+            background: #0e1712;
+
+            border: 1px solid #1f3d2d;
+
+            border-radius: 12px;
+
+            padding: 25px;
+
+            transition: 0.3s;
+        }
+
+        .academic-card:hover {
+            transform: translateY(-5px);
+
+            border-color: #00ff88;
+
+            box-shadow:
+                0 0 25px rgba(0, 255, 136, 0.08);
+        }
+
+        .academic-icon {
+            font-size: 30px;
+
+            margin-bottom: 15px;
+        }
+
+        .academic-card h3 {
+            color: #00ff88;
+
+            margin-bottom: 10px;
+        }
+
+        .academic-card p {
+            color: #91a99b;
+
+            font-size: 14px;
         }
 
         /* =========================
            Skills
-        ========================= */
+        ========================== */
 
         .skills-grid {
             display: grid;
@@ -269,8 +359,125 @@
         }
 
         /* =========================
+           Projects
+        ========================== */
+
+        .projects-grid {
+            display: grid;
+
+            grid-template-columns:
+                repeat(2, 1fr);
+
+            gap: 20px;
+        }
+
+        .project-card {
+            background: #0e1712;
+
+            border: 1px solid #1f3d2d;
+
+            border-radius: 12px;
+
+            padding: 28px;
+
+            transition: 0.3s;
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+
+            border-color: #00ff88;
+        }
+
+        .project-card h3 {
+            color: #00ff88;
+
+            margin-bottom: 12px;
+        }
+
+        .project-card p {
+            color: #91a99b;
+
+            margin-bottom: 20px;
+        }
+
+        .project-status {
+            display: inline-block;
+
+            padding: 5px 10px;
+
+            border: 1px solid #1f6b45;
+
+            border-radius: 20px;
+
+            color: #00ff88;
+
+            font-size: 12px;
+        }
+
+        /* =========================
+           Learning Journey
+        ========================== */
+
+        .journey {
+            max-width: 850px;
+        }
+
+        .journey-item {
+            position: relative;
+
+            padding: 20px 25px;
+
+            margin-bottom: 15px;
+
+            background: #0e1712;
+
+            border-left: 3px solid #00ff88;
+
+            border-radius: 0 10px 10px 0;
+        }
+
+        .journey-item h3 {
+            color: #00ff88;
+
+            margin-bottom: 5px;
+        }
+
+        .journey-item p {
+            color: #91a99b;
+
+            font-size: 14px;
+        }
+
+        /* =========================
+           Contact
+        ========================== */
+
+        .contact-box {
+            text-align: center;
+
+            max-width: 800px;
+
+            margin: auto;
+        }
+
+        .contact-box h3 {
+            color: #00ff88;
+
+            font-size: 28px;
+
+            margin-bottom: 15px;
+        }
+
+        .contact-box p {
+            color: #91a99b;
+
+            margin-bottom: 25px;
+        }
+
+        /* =========================
            Footer
-        ========================= */
+        ========================== */
 
         footer {
             text-align: center;
@@ -283,11 +490,12 @@
         }
 
         /* =========================
-           Responsive Design
-        ========================= */
+           Responsive
+        ========================== */
 
-        @media (max-width: 900px) {
+        @media (max-width: 950px) {
 
+            .academic-grid,
             .skills-grid {
                 grid-template-columns:
                     repeat(2, 1fr);
@@ -302,19 +510,28 @@
             }
 
             .hero {
-                padding-top: 130px;
+                padding-top: 140px;
             }
 
             section {
                 padding: 70px 6%;
             }
 
+            .projects-grid {
+                grid-template-columns: 1fr;
+            }
+
         }
 
         @media (max-width: 600px) {
 
+            .academic-grid,
             .skills-grid {
                 grid-template-columns: 1fr;
+            }
+
+            .hero h1 {
+                font-size: 48px;
             }
 
         }
@@ -339,27 +556,23 @@
         <ul class="nav-links">
 
             <li>
-                <a href="#about">
-                    About
-                </a>
+                <a href="#about">About</a>
             </li>
 
             <li>
-                <a href="#education">
-                    Education
-                </a>
+                <a href="#education">Education</a>
             </li>
 
             <li>
-                <a href="#skills">
-                    Skills
-                </a>
+                <a href="#skills">Skills</a>
             </li>
 
             <li>
-                <a href="#projects">
-                    Projects
-                </a>
+                <a href="#projects">Projects</a>
+            </li>
+
+            <li>
+                <a href="#journey">Journey</a>
             </li>
 
         </ul>
@@ -368,7 +581,7 @@
 
 
     <!-- =========================
-         Hero Section
+         Hero
     ========================== -->
 
     <header class="hero">
@@ -390,9 +603,12 @@
             <p>
 
                 First-year Cybersecurity student at the
-                University College of Applied Sciences (UCAS),
-                building a strong foundation in programming,
-                computer networks, Linux, and cybersecurity.
+                <span class="highlight">
+                    University College of Applied Sciences (UCAS)
+                </span>.
+
+                Currently building a strong foundation in
+                programming, networking, Linux and cybersecurity.
 
             </p>
 
@@ -421,7 +637,7 @@
 
 
     <!-- =========================
-         About Section
+         About
     ========================== -->
 
     <section id="about">
@@ -431,23 +647,29 @@
         </h2>
 
         <p class="section-description">
-
-            A first-year student exploring cybersecurity
-            through programming, networking, Linux, and
-            hands-on technical projects.
-
+            A short introduction about my cybersecurity journey.
         </p>
 
         <div class="card">
 
-            <p>
+            <p class="about-text">
 
-                I am currently studying Cybersecurity at the
-                University College of Applied Sciences (UCAS).
+                I am a first-year
+                <span class="highlight">
+                    Cybersecurity student
+                </span>
+                at the University College of Applied Sciences (UCAS).
 
-                My goal is to develop strong technical skills,
-                strengthen my cybersecurity knowledge, and gain
-                practical experience through projects and labs.
+                I am interested in understanding how computer
+                systems and networks work, how they can be secured,
+                and how cybersecurity professionals identify and
+                defend against security threats.
+
+                <br><br>
+
+                My current focus is developing strong fundamentals
+                through university courses, practical labs,
+                programming projects and continuous self-learning.
 
             </p>
 
@@ -457,24 +679,127 @@
 
 
     <!-- =========================
-         Education Section
+         Academic Foundation
     ========================== -->
 
     <section id="education">
 
         <h2 class="section-title">
-            <span>Education</span>
+            Academic <span>Foundation</span>
         </h2>
 
-        <div class="card">
+        <p class="section-description">
 
-            <h3>
-                University College of Applied Sciences
-            </h3>
+            The main areas of my first-year studies that support
+            my cybersecurity learning journey.
 
-            <p>
-                Cybersecurity — First Year
-            </p>
+        </p>
+
+
+        <div class="academic-grid">
+
+
+            <div class="academic-card">
+
+                <div class="academic-icon">
+                    🌐
+                </div>
+
+                <h3>
+                    Computer Networks
+                </h3>
+
+                <p>
+
+                    Networking fundamentals, protocols,
+                    IP addressing, communication and
+                    network architecture.
+
+                </p>
+
+            </div>
+
+
+            <div class="academic-card">
+
+                <div class="academic-icon">
+                    🐍
+                </div>
+
+                <h3>
+                    Programming
+                </h3>
+
+                <p>
+
+                    Programming fundamentals, problem solving,
+                    algorithms and software development concepts.
+
+                </p>
+
+            </div>
+
+
+            <div class="academic-card">
+
+                <div class="academic-icon">
+                    💻
+                </div>
+
+                <h3>
+                    Computing Fundamentals
+                </h3>
+
+                <p>
+
+                    Fundamental computing concepts and
+                    understanding how computer systems work.
+
+                </p>
+
+            </div>
+
+
+            <div class="academic-card">
+
+                <div class="academic-icon">
+                    🧠
+                </div>
+
+                <h3>
+                    Discrete Mathematics
+                </h3>
+
+                <p>
+
+                    Logic, sets, relations and mathematical
+                    problem-solving concepts useful in computing.
+
+                </p>
+
+            </div>
+
+
+            <div class="academic-card">
+
+                <div class="academic-icon">
+                    🇬🇧
+                </div>
+
+                <h3>
+                    Technical English
+                </h3>
+
+                <p>
+
+                    Understanding technical documentation,
+                    cybersecurity resources and English
+                    technical terminology.
+
+                </p>
+
+            </div>
+
 
         </div>
 
@@ -482,7 +807,7 @@
 
 
     <!-- =========================
-         Skills Section
+         Skills
     ========================== -->
 
     <section id="skills">
@@ -493,16 +818,14 @@
 
         <p class="section-description">
 
-            Skills and fundamentals I am developing as a
-            first-year Cybersecurity student.
+            Technologies and fundamentals I am currently
+            learning and practicing.
 
         </p>
 
 
         <div class="skills-grid">
 
-
-            <!-- Python -->
 
             <div class="skill-card">
 
@@ -520,28 +843,6 @@
 
             </div>
 
-
-            <!-- Networking -->
-
-            <div class="skill-card">
-
-                <div class="skill-icon">
-                    🌐
-                </div>
-
-                <h3>
-                    Computer Networking
-                </h3>
-
-                <p>
-                    Basic networking concepts, protocols,
-                    IP addressing and network communication.
-                </p>
-
-            </div>
-
-
-            <!-- Linux -->
 
             <div class="skill-card">
 
@@ -561,8 +862,6 @@
             </div>
 
 
-            <!-- Cybersecurity -->
-
             <div class="skill-card">
 
                 <div class="skill-icon">
@@ -570,38 +869,34 @@
                 </div>
 
                 <h3>
-                    Cybersecurity Fundamentals
+                    Cybersecurity
                 </h3>
 
                 <p>
-                    Basic security concepts, threats,
-                    vulnerabilities and defensive practices.
+                    Security fundamentals, threats,
+                    vulnerabilities and defensive concepts.
                 </p>
 
             </div>
 
-
-            <!-- Nmap -->
 
             <div class="skill-card">
 
                 <div class="skill-icon">
-                    🔎
+                    🌐
                 </div>
 
                 <h3>
-                    Nmap
+                    Networking
                 </h3>
 
                 <p>
-                    Basic network scanning and service discovery
-                    in authorized lab environments.
+                    Basic networking concepts,
+                    protocols and network communication.
                 </p>
 
             </div>
 
-
-            <!-- Wireshark -->
 
             <div class="skill-card">
 
@@ -621,7 +916,23 @@
             </div>
 
 
-            <!-- Packet Tracer -->
+            <div class="skill-card">
+
+                <div class="skill-icon">
+                    🔎
+                </div>
+
+                <h3>
+                    Nmap
+                </h3>
+
+                <p>
+                    Basic network scanning and service
+                    discovery in authorized environments.
+                </p>
+
+            </div>
+
 
             <div class="skill-card">
 
@@ -634,14 +945,12 @@
                 </h3>
 
                 <p>
-                    Building and configuring basic computer
-                    networks and network devices.
+                    Building and configuring basic
+                    computer networks.
                 </p>
 
             </div>
 
-
-            <!-- Command Line -->
 
             <div class="skill-card">
 
@@ -654,14 +963,30 @@
                 </h3>
 
                 <p>
-                    Working with Windows PowerShell, CMD
-                    and Linux Terminal.
+                    Windows CMD, PowerShell and
+                    Linux Terminal fundamentals.
                 </p>
 
             </div>
 
 
-            <!-- English -->
+            <div class="skill-card">
+
+                <div class="skill-icon">
+                    🔧
+                </div>
+
+                <h3>
+                    Git & GitHub
+                </h3>
+
+                <p>
+                    Version control and managing
+                    programming projects.
+                </p>
+
+            </div>
+
 
             <div class="skill-card">
 
@@ -681,28 +1006,6 @@
             </div>
 
 
-            <!-- Technical Learning -->
-
-            <div class="skill-card">
-
-                <div class="skill-icon">
-                    📚
-                </div>
-
-                <h3>
-                    Technical Learning
-                </h3>
-
-                <p>
-                    Reading technical documentation and learning
-                    through practical labs.
-                </p>
-
-            </div>
-
-
-            <!-- Problem Solving -->
-
             <div class="skill-card">
 
                 <div class="skill-icon">
@@ -714,28 +1017,26 @@
                 </h3>
 
                 <p>
-                    Analyzing technical problems and finding
-                    practical solutions.
+                    Analyzing technical problems and
+                    finding practical solutions.
                 </p>
 
             </div>
 
 
-            <!-- Git -->
-
             <div class="skill-card">
 
                 <div class="skill-icon">
-                    🔧
+                    📚
                 </div>
 
                 <h3>
-                    Git & GitHub
+                    Technical Research
                 </h3>
 
                 <p>
-                    Basic version control and managing
-                    programming projects.
+                    Learning from documentation,
+                    technical resources and practical labs.
                 </p>
 
             </div>
@@ -747,7 +1048,7 @@
 
 
     <!-- =========================
-         Projects Section
+         Projects
     ========================== -->
 
     <section id="projects">
@@ -758,23 +1059,219 @@
 
         <p class="section-description">
 
-            Practical projects and labs developed throughout
-            my cybersecurity learning journey.
+            Practical projects and cybersecurity labs
+            developed during my learning journey.
 
         </p>
 
-        <div class="card">
+
+        <div class="projects-grid">
+
+
+            <div class="project-card">
+
+                <h3>
+                    Python Socket Programming
+                </h3>
+
+                <p>
+
+                    A networking project focused on
+                    client-server communication using Python sockets.
+
+                </p>
+
+                <span class="project-status">
+                    In Progress
+                </span>
+
+            </div>
+
+
+            <div class="project-card">
+
+                <h3>
+                    Cisco Network Design
+                </h3>
+
+                <p>
+
+                    Designing and configuring a multi-network
+                    environment using Cisco Packet Tracer.
+
+                </p>
+
+                <span class="project-status">
+                    In Progress
+                </span>
+
+            </div>
+
+
+            <div class="project-card">
+
+                <h3>
+                    Linux & Kali Labs
+                </h3>
+
+                <p>
+
+                    Practical Linux and cybersecurity exercises
+                    focused on understanding systems and networks.
+
+                </p>
+
+                <span class="project-status">
+                    Learning
+                </span>
+
+            </div>
+
+
+            <div class="project-card">
+
+                <h3>
+                    Network Analysis
+                </h3>
+
+                <p>
+
+                    Learning network traffic analysis and
+                    packet inspection using Wireshark.
+
+                </p>
+
+                <span class="project-status">
+                    Learning
+                </span>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         Learning Journey
+    ========================== -->
+
+    <section id="journey">
+
+        <h2 class="section-title">
+            Learning <span>Journey</span>
+        </h2>
+
+        <p class="section-description">
+
+            My current path toward building a strong
+            cybersecurity foundation.
+
+        </p>
+
+
+        <div class="journey">
+
+
+            <div class="journey-item">
+
+                <h3>
+                    01 — Programming
+                </h3>
+
+                <p>
+                    Building programming and problem-solving skills.
+                </p>
+
+            </div>
+
+
+            <div class="journey-item">
+
+                <h3>
+                    02 — Networking
+                </h3>
+
+                <p>
+                    Understanding how networks and protocols work.
+                </p>
+
+            </div>
+
+
+            <div class="journey-item">
+
+                <h3>
+                    03 — Linux
+                </h3>
+
+                <p>
+                    Learning Linux, terminals and system fundamentals.
+                </p>
+
+            </div>
+
+
+            <div class="journey-item">
+
+                <h3>
+                    04 — Cybersecurity
+                </h3>
+
+                <p>
+                    Applying programming, networking and Linux
+                    knowledge to cybersecurity.
+                </p>
+
+            </div>
+
+
+            <div class="journey-item">
+
+                <h3>
+                    05 — Continuous Learning
+                </h3>
+
+                <p>
+                    Building projects, practicing labs and
+                    continuously improving technical skills.
+                </p>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         Contact
+    ========================== -->
+
+    <section id="contact">
+
+        <div class="contact-box">
 
             <h3>
-                Coming Soon...
+                Let's Connect
             </h3>
 
             <p>
 
-                Projects will be added here as I continue
-                learning and building.
+                I am always learning, building and exploring
+                the world of cybersecurity.
 
             </p>
+
+            <a
+                href="https://github.com/CyberSec-Ahmed-Khader"
+                class="btn btn-primary"
+                target="_blank"
+            >
+                Visit My GitHub
+            </a>
 
         </div>
 
