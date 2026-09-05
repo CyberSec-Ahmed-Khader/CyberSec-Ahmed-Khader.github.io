@@ -1,6 +1,7 @@
 ```html
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -20,10 +21,7 @@
 
         body {
             font-family: "Segoe UI", Arial, sans-serif;
-            background:
-                radial-gradient(circle at 15% 20%, rgba(0, 255, 140, 0.08), transparent 25%),
-                radial-gradient(circle at 85% 80%, rgba(0, 255, 140, 0.06), transparent 25%),
-                #050807;
+            background: #050807;
             color: #e8fff3;
             line-height: 1.7;
             overflow-x: hidden;
@@ -42,12 +40,12 @@
         }
 
         a {
-            color: inherit;
             text-decoration: none;
+            color: inherit;
         }
 
         .container {
-            width: min(1150px, 90%);
+            width: min(1100px, 90%);
             margin: auto;
         }
 
@@ -59,23 +57,22 @@
             left: 0;
             width: 100%;
             z-index: 1000;
-            background: rgba(3, 8, 6, 0.82);
-            backdrop-filter: blur(18px);
+            background: rgba(5, 8, 7, 0.9);
+            backdrop-filter: blur(15px);
             border-bottom: 1px solid rgba(0, 255, 140, 0.12);
         }
 
         .nav-container {
-            min-height: 72px;
+            min-height: 70px;
             display: flex;
             align-items: center;
             justify-content: space-between;
         }
 
         .logo {
-            font-size: 1.35rem;
-            font-weight: 800;
             color: #00ff8c;
-            letter-spacing: 1px;
+            font-size: 1.3rem;
+            font-weight: 800;
         }
 
         .logo span {
@@ -84,14 +81,12 @@
 
         .nav-links {
             display: flex;
-            align-items: center;
-            gap: 28px;
+            gap: 25px;
             list-style: none;
         }
 
         .nav-links a {
-            color: #b8cfc4;
-            font-size: 0.95rem;
+            color: #9bb5a8;
             transition: 0.3s;
         }
 
@@ -99,23 +94,24 @@
             color: #00ff8c;
         }
 
+        /* ================= LANGUAGE ================= */
+
         .language-switch {
             display: flex;
-            gap: 6px;
+            gap: 5px;
             padding: 4px;
-            border: 1px solid rgba(0, 255, 140, 0.18);
+            border: 1px solid rgba(0, 255, 140, 0.15);
             border-radius: 20px;
-            background: rgba(0, 255, 140, 0.04);
         }
 
         .language-switch button {
             border: none;
             background: transparent;
             color: #8ca99b;
-            padding: 6px 11px;
+            padding: 6px 10px;
             border-radius: 15px;
             cursor: pointer;
-            font-weight: 700;
+            font-weight: bold;
             transition: 0.3s;
         }
 
@@ -142,25 +138,24 @@
             display: inline-flex;
             align-items: center;
             gap: 9px;
-            padding: 8px 15px;
-            border: 1px solid rgba(0, 255, 140, 0.22);
+            padding: 7px 14px;
+            border: 1px solid rgba(0, 255, 140, 0.2);
             border-radius: 30px;
-            background: rgba(0, 255, 140, 0.05);
+            background: rgba(0, 255, 140, 0.04);
             color: #8fffc7;
-            font-size: 0.9rem;
-            margin-bottom: 24px;
+            margin-bottom: 25px;
         }
 
         .status-dot {
             width: 8px;
             height: 8px;
-            background: #00ff8c;
             border-radius: 50%;
+            background: #00ff8c;
             box-shadow: 0 0 12px #00ff8c;
         }
 
         .hero h1 {
-            font-size: clamp(3rem, 8vw, 6.3rem);
+            font-size: clamp(3.5rem, 8vw, 6rem);
             line-height: 1;
             margin-bottom: 20px;
             letter-spacing: -3px;
@@ -168,57 +163,53 @@
 
         .hero h1 span {
             color: #00ff8c;
-            text-shadow: 0 0 35px rgba(0, 255, 140, 0.25);
         }
 
         .hero h2 {
-            color: #a7beb2;
-            font-size: clamp(1.2rem, 2vw, 1.6rem);
+            color: #a6bbb0;
+            font-size: 1.5rem;
             font-weight: 400;
-            margin-bottom: 25px;
+            margin-bottom: 20px;
         }
 
         .hero-description {
+            color: #80988c;
             max-width: 720px;
-            color: #839c90;
-            font-size: 1.08rem;
-            margin-bottom: 35px;
+            font-size: 1.05rem;
+            margin-bottom: 30px;
         }
 
         .hero-buttons {
             display: flex;
-            gap: 15px;
+            gap: 12px;
             flex-wrap: wrap;
         }
 
         .btn {
-            padding: 13px 23px;
-            border-radius: 9px;
+            padding: 12px 20px;
+            border-radius: 8px;
             font-weight: 700;
             transition: 0.3s;
-            display: inline-block;
         }
 
         .btn-primary {
             background: #00ff8c;
             color: #031008;
-            box-shadow: 0 0 25px rgba(0, 255, 140, 0.12);
         }
 
         .btn-primary:hover {
             transform: translateY(-3px);
-            box-shadow: 0 0 35px rgba(0, 255, 140, 0.25);
+            box-shadow: 0 0 25px rgba(0, 255, 140, 0.25);
         }
 
         .btn-secondary {
-            border: 1px solid rgba(0, 255, 140, 0.25);
-            color: #b8d2c4;
-            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid rgba(0, 255, 140, 0.2);
+            color: #a9c0b4;
         }
 
         .btn-secondary:hover {
-            border-color: #00ff8c;
             color: #00ff8c;
+            border-color: #00ff8c;
         }
 
         /* ================= STATS ================= */
@@ -227,48 +218,49 @@
             display: grid;
             grid-template-columns: repeat(4, 1fr);
             gap: 15px;
-            margin-top: 55px;
+            margin-top: 45px;
         }
 
         .stat {
-            padding: 20px;
+            padding: 18px;
             border: 1px solid rgba(0, 255, 140, 0.1);
-            background: rgba(255, 255, 255, 0.018);
-            border-radius: 14px;
+            border-radius: 12px;
+            background: rgba(255, 255, 255, 0.015);
         }
 
         .stat h3 {
             color: #00ff8c;
-            font-size: 1.6rem;
+            font-size: 1.2rem;
+            margin-bottom: 3px;
         }
 
         .stat p {
-            color: #718a7e;
-            font-size: 0.85rem;
+            color: #71897d;
+            font-size: 0.8rem;
         }
 
         /* ================= SECTIONS ================= */
 
         section {
-            padding: 100px 0;
+            padding: 90px 0;
         }
 
         .section-heading {
-            margin-bottom: 50px;
+            margin-bottom: 40px;
         }
 
         .section-label {
             color: #00ff8c;
-            font-size: 0.8rem;
+            font-size: 0.78rem;
+            letter-spacing: 2px;
             text-transform: uppercase;
-            letter-spacing: 3px;
-            font-weight: 800;
-            margin-bottom: 8px;
+            font-weight: bold;
+            margin-bottom: 7px;
         }
 
         .section-heading h2 {
-            font-size: clamp(2rem, 4vw, 3rem);
-            margin-bottom: 12px;
+            font-size: clamp(2rem, 4vw, 2.8rem);
+            margin-bottom: 10px;
         }
 
         .section-heading p {
@@ -281,30 +273,29 @@
         .about-grid {
             display: grid;
             grid-template-columns: 1.2fr 0.8fr;
-            gap: 25px;
+            gap: 20px;
         }
 
-        .glass-card {
-            border: 1px solid rgba(0, 255, 140, 0.11);
-            background: rgba(255, 255, 255, 0.025);
-            border-radius: 18px;
-            padding: 30px;
-            backdrop-filter: blur(10px);
+        .card {
+            padding: 28px;
+            border-radius: 15px;
+            border: 1px solid rgba(0, 255, 140, 0.1);
+            background: rgba(255, 255, 255, 0.018);
             transition: 0.3s;
         }
 
-        .glass-card:hover {
+        .card:hover {
             transform: translateY(-5px);
             border-color: rgba(0, 255, 140, 0.25);
         }
 
-        .glass-card h3 {
+        .card h3 {
             color: #00ff8c;
-            margin-bottom: 14px;
+            margin-bottom: 10px;
         }
 
-        .glass-card p {
-            color: #91a89c;
+        .card p {
+            color: #849b90;
         }
 
         /* ================= ACADEMIC ================= */
@@ -312,31 +303,56 @@
         .academic-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
-            gap: 20px;
+            gap: 18px;
         }
 
         .academic-card {
-            padding: 28px;
-            border-radius: 16px;
+            padding: 27px;
+            border-radius: 15px;
             border: 1px solid rgba(0, 255, 140, 0.1);
-            background: linear-gradient(
-                145deg,
-                rgba(0, 255, 140, 0.04),
-                rgba(255, 255, 255, 0.015)
-            );
+            background: rgba(255, 255, 255, 0.018);
+            transition: 0.3s;
         }
 
-        .academic-card .icon {
-            font-size: 2rem;
-            margin-bottom: 15px;
+        .academic-card:hover {
+            transform: translateY(-5px);
+            border-color: rgba(0, 255, 140, 0.3);
+        }
+
+        /* ================= ICON ANIMATION ================= */
+
+        .icon {
+            width: 55px;
+            height: 55px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 13px;
+            font-size: 1.8rem;
+            margin-bottom: 17px;
+            background: rgba(0, 255, 140, 0.06);
+            border: 1px solid rgba(0, 255, 140, 0.12);
+
+            transition:
+                transform 0.3s ease,
+                color 0.3s ease,
+                background 0.3s ease,
+                box-shadow 0.3s ease;
+        }
+
+        .academic-card:hover .icon {
+            transform: translateY(-8px) scale(1.06);
+            color: #00ff8c;
+            background: rgba(0, 255, 140, 0.12);
+            box-shadow: 0 10px 25px rgba(0, 255, 140, 0.12);
         }
 
         .academic-card h3 {
-            margin-bottom: 8px;
+            margin-bottom: 7px;
         }
 
         .academic-card p {
-            color: #7e968a;
+            color: #7e958a;
         }
 
         /* ================= SKILLS ================= */
@@ -344,14 +360,20 @@
         .skills-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
-            gap: 18px;
+            gap: 17px;
         }
 
         .skill-card {
-            padding: 23px;
-            border-radius: 15px;
+            padding: 22px;
             border: 1px solid rgba(0, 255, 140, 0.1);
-            background: rgba(255, 255, 255, 0.018);
+            border-radius: 14px;
+            background: rgba(255, 255, 255, 0.015);
+            transition: 0.3s;
+        }
+
+        .skill-card:hover {
+            transform: translateY(-5px);
+            border-color: rgba(0, 255, 140, 0.28);
         }
 
         .skill-top {
@@ -359,7 +381,7 @@
             justify-content: space-between;
             align-items: center;
             gap: 10px;
-            margin-bottom: 13px;
+            margin-bottom: 10px;
         }
 
         .skill-name {
@@ -367,16 +389,16 @@
         }
 
         .skill-level {
-            font-size: 0.72rem;
             color: #00ff8c;
+            font-size: 0.7rem;
+            padding: 3px 8px;
+            border-radius: 15px;
             border: 1px solid rgba(0, 255, 140, 0.18);
-            padding: 4px 8px;
-            border-radius: 20px;
         }
 
         .skill-card p {
-            color: #72897e;
-            font-size: 0.88rem;
+            color: #748b80;
+            font-size: 0.86rem;
         }
 
         /* ================= PROJECTS ================= */
@@ -384,119 +406,103 @@
         .projects-grid {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
-            gap: 22px;
+            gap: 20px;
         }
 
         .project-card {
-            position: relative;
-            padding: 30px;
-            border-radius: 18px;
-            border: 1px solid rgba(0, 255, 140, 0.11);
-            background:
-                linear-gradient(
-                    145deg,
-                    rgba(0, 255, 140, 0.045),
-                    rgba(255, 255, 255, 0.012)
-                );
-            overflow: hidden;
-            transition: 0.35s;
-        }
-
-        .project-card::before {
-            content: "";
-            position: absolute;
-            width: 120px;
-            height: 120px;
-            background: rgba(0, 255, 140, 0.08);
-            filter: blur(50px);
-            top: -40px;
-            right: -40px;
+            padding: 28px;
+            border-radius: 16px;
+            border: 1px solid rgba(0, 255, 140, 0.1);
+            background: rgba(255, 255, 255, 0.018);
+            transition: 0.3s;
         }
 
         .project-card:hover {
-            transform: translateY(-7px);
+            transform: translateY(-6px);
             border-color: rgba(0, 255, 140, 0.3);
         }
 
         .project-number {
             color: #00ff8c;
             font-family: monospace;
-            font-size: 0.8rem;
-            margin-bottom: 15px;
-        }
-
-        .project-card h3 {
-            font-size: 1.4rem;
+            font-size: 0.78rem;
             margin-bottom: 10px;
         }
 
+        .project-card h3 {
+            font-size: 1.3rem;
+            margin-bottom: 9px;
+        }
+
         .project-card p {
-            color: #81988c;
+            color: #7f968b;
             margin-bottom: 18px;
         }
 
         .tags {
             display: flex;
             flex-wrap: wrap;
-            gap: 7px;
+            gap: 6px;
+            margin-bottom: 20px;
         }
 
         .tag {
-            padding: 5px 9px;
-            border-radius: 6px;
-            background: rgba(0, 255, 140, 0.055);
+            padding: 4px 8px;
+            border-radius: 5px;
+            background: rgba(0, 255, 140, 0.05);
             border: 1px solid rgba(0, 255, 140, 0.1);
             color: #8be8bd;
-            font-size: 0.72rem;
+            font-size: 0.7rem;
+        }
+
+        .project-link {
+            display: inline-block;
+            color: #00ff8c;
+            font-size: 0.85rem;
+            font-weight: 700;
+            transition: 0.3s;
+        }
+
+        .project-link:hover {
+            transform: translateX(5px);
+        }
+
+        [dir="rtl"] .project-link:hover {
+            transform: translateX(-5px);
         }
 
         /* ================= JOURNEY ================= */
 
         .timeline {
-            position: relative;
             max-width: 850px;
+            position: relative;
         }
 
         .timeline::before {
             content: "";
             position: absolute;
-            left: 10px;
+            left: 8px;
             top: 0;
             bottom: 0;
             width: 1px;
-            background: rgba(0, 255, 140, 0.18);
-        }
-
-        [dir="rtl"] .timeline::before {
-            left: auto;
-            right: 10px;
+            background: rgba(0, 255, 140, 0.15);
         }
 
         .timeline-item {
             position: relative;
-            padding-left: 45px;
-            margin-bottom: 35px;
-        }
-
-        [dir="rtl"] .timeline-item {
-            padding-left: 0;
-            padding-right: 45px;
+            padding-left: 40px;
+            margin-bottom: 32px;
         }
 
         .timeline-dot {
             position: absolute;
-            left: 4px;
+            left: 2px;
             top: 7px;
             width: 13px;
             height: 13px;
             background: #00ff8c;
             border-radius: 50%;
-            box-shadow: 0 0 15px rgba(0, 255, 140, 0.45);
-        }
-
-        [dir="rtl"] .timeline-dot {
-            left: auto;
-            right: 4px;
+            box-shadow: 0 0 13px rgba(0, 255, 140, 0.4);
         }
 
         .timeline-item h3 {
@@ -510,58 +516,53 @@
         /* ================= CONTACT ================= */
 
         .contact-box {
-            padding: 45px;
-            border-radius: 22px;
-            border: 1px solid rgba(0, 255, 140, 0.14);
-            background:
-                radial-gradient(
-                    circle at 50% 0%,
-                    rgba(0, 255, 140, 0.08),
-                    transparent 45%
-                ),
-                rgba(255, 255, 255, 0.02);
+            padding: 40px;
+            border-radius: 18px;
             text-align: center;
+            border: 1px solid rgba(0, 255, 140, 0.12);
+            background: rgba(255, 255, 255, 0.018);
         }
 
         .contact-box h2 {
-            font-size: 2.4rem;
-            margin-bottom: 12px;
+            font-size: 2.3rem;
+            margin-bottom: 10px;
         }
 
         .contact-box p {
-            color: #80988c;
             max-width: 650px;
             margin: auto auto 25px;
+            color: #80978c;
         }
 
         .contact-links {
             display: flex;
             justify-content: center;
-            gap: 12px;
             flex-wrap: wrap;
+            gap: 10px;
         }
 
         .contact-link {
-            padding: 10px 17px;
+            padding: 9px 15px;
             border: 1px solid rgba(0, 255, 140, 0.15);
-            border-radius: 8px;
-            color: #9bb4a7;
+            border-radius: 7px;
+            color: #9ab2a6;
             transition: 0.3s;
         }
 
         .contact-link:hover {
             color: #00ff8c;
             border-color: #00ff8c;
+            transform: translateY(-3px);
         }
 
         /* ================= FOOTER ================= */
 
         footer {
-            padding: 30px 0;
+            padding: 25px 0;
             border-top: 1px solid rgba(0, 255, 140, 0.08);
-            color: #61776c;
             text-align: center;
-            font-size: 0.85rem;
+            color: #61786c;
+            font-size: 0.82rem;
         }
 
         /* ================= RTL ================= */
@@ -570,22 +571,25 @@
             text-align: right;
         }
 
-        [dir="rtl"] .nav-container {
-            flex-direction: row-reverse;
+        [dir="rtl"] .timeline::before {
+            left: auto;
+            right: 8px;
         }
 
-        [dir="rtl"] .nav-links {
-            flex-direction: row-reverse;
+        [dir="rtl"] .timeline-item {
+            padding-left: 0;
+            padding-right: 40px;
         }
 
-        [dir="rtl"] .hero-buttons,
-        [dir="rtl"] .contact-links {
-            flex-direction: row-reverse;
+        [dir="rtl"] .timeline-dot {
+            left: auto;
+            right: 2px;
         }
 
         /* ================= RESPONSIVE ================= */
 
         @media (max-width: 900px) {
+
             .nav-links {
                 display: none;
             }
@@ -606,18 +610,17 @@
         }
 
         @media (max-width: 600px) {
+
             section {
-                padding: 75px 0;
+                padding: 70px 0;
             }
 
             .hero {
-                min-height: auto;
-                padding-top: 130px;
-                padding-bottom: 80px;
+                padding-top: 120px;
             }
 
             .hero h1 {
-                font-size: 3.4rem;
+                font-size: 3.5rem;
             }
 
             .stats,
@@ -646,35 +649,72 @@
             </div>
 
             <ul class="nav-links">
-                <li><a href="#about" data-en="About" data-ar="عني">About</a></li>
-                <li><a href="#skills" data-en="Skills" data-ar="المهارات">Skills</a></li>
-                <li><a href="#projects" data-en="Projects" data-ar="المشاريع">Projects</a></li>
-                <li><a href="#journey" data-en="Journey" data-ar="رحلتي">Journey</a></li>
-                <li><a href="#contact" data-en="Contact" data-ar="تواصل">Contact</a></li>
+                <li>
+                    <a href="#about"
+                       data-en="About"
+                       data-ar="عني">About</a>
+                </li>
+
+                <li>
+                    <a href="#skills"
+                       data-en="Skills"
+                       data-ar="المهارات">Skills</a>
+                </li>
+
+                <li>
+                    <a href="#projects"
+                       data-en="Projects"
+                       data-ar="المشاريع">Projects</a>
+                </li>
+
+                <li>
+                    <a href="#journey"
+                       data-en="Journey"
+                       data-ar="رحلتي">Journey</a>
+                </li>
+
+                <li>
+                    <a href="#contact"
+                       data-en="Contact"
+                       data-ar="تواصل">Contact</a>
+                </li>
             </ul>
 
             <div class="language-switch">
-                <button id="enBtn" class="active" onclick="setLanguage('en')">EN</button>
-                <button id="arBtn" onclick="setLanguage('ar')">AR</button>
+                <button id="enBtn"
+                        class="active"
+                        onclick="setLanguage('en')">
+                    EN
+                </button>
+
+                <button id="arBtn"
+                        onclick="setLanguage('ar')">
+                    AR
+                </button>
             </div>
 
         </div>
     </nav>
 
+
     <!-- ================= HERO ================= -->
 
     <header class="hero">
+
         <div class="container">
 
             <div class="hero-content">
 
                 <div class="status">
+
                     <span class="status-dot"></span>
+
                     <span
                         data-en="Cybersecurity Student • Building & Learning"
                         data-ar="طالب أمن سيبراني • أتعلم وأبني">
                         Cybersecurity Student • Building & Learning
                     </span>
+
                 </div>
 
                 <h1>
@@ -690,73 +730,83 @@
 
                 <p
                     class="hero-description"
-                    data-en="I am a cybersecurity student focused on understanding networks, systems, programming, and defensive security while building practical projects that turn knowledge into real experience."
-                    data-ar="أنا طالب أمن سيبراني أركز على فهم الشبكات والأنظمة والبرمجة والأمن الدفاعي، وأسعى لبناء مشاريع عملية تحول المعرفة النظرية إلى خبرة حقيقية.">
-                    I am a cybersecurity student focused on understanding networks,
-                    systems, programming, and defensive security while building
-                    practical projects that turn knowledge into real experience.
+                    data-en="I am a cybersecurity student interested in networks, systems, programming, and defensive security. I learn by building practical projects and experimenting with real technologies."
+                    data-ar="أنا طالب أمن سيبراني مهتم بالشبكات والأنظمة والبرمجة والأمن الدفاعي. أتعلم من خلال بناء المشاريع العملية وتجربة التقنيات المختلفة.">
+                    I am a cybersecurity student interested in networks, systems,
+                    programming, and defensive security. I learn by building
+                    practical projects and experimenting with real technologies.
                 </p>
 
                 <div class="hero-buttons">
-                    <a
-                        href="#projects"
-                        class="btn btn-primary"
-                        data-en="View My Projects"
-                        data-ar="استعرض مشاريعي">
-                        View My Projects
+
+                    <a href="#projects"
+                       class="btn btn-primary"
+                       data-en="View Projects"
+                       data-ar="استعرض المشاريع">
+                        View Projects
                     </a>
 
-                    <a
-                        href="#contact"
-                        class="btn btn-secondary"
-                        data-en="Contact Me"
-                        data-ar="تواصل معي">
+                    <a href="#contact"
+                       class="btn btn-secondary"
+                       data-en="Contact Me"
+                       data-ar="تواصل معي">
                         Contact Me
                     </a>
+
                 </div>
+
 
                 <div class="stats">
 
                     <div class="stat">
-                        <h3>01</h3>
-                        <p data-en="Cybersecurity Student" data-ar="طالب أمن سيبراني">
-                            Cybersecurity Student
+                        <h3>First Year</h3>
+                        <p data-en="University Student"
+                           data-ar="طالب جامعي">
+                            University Student
                         </p>
                     </div>
 
                     <div class="stat">
                         <h3>Java</h3>
-                        <p data-en="Proficient" data-ar="إتقان جيد">
+                        <p data-en="Proficient"
+                           data-ar="متقن">
                             Proficient
                         </p>
                     </div>
 
                     <div class="stat">
                         <h3>Python</h3>
-                        <p data-en="Programming" data-ar="برمجة">
+                        <p data-en="Programming"
+                           data-ar="برمجة">
                             Programming
                         </p>
                     </div>
 
                     <div class="stat">
-                        <h3>Network</h3>
-                        <p data-en="Practical Design" data-ar="تصميم عملي">
-                            Practical Design
+                        <h3>English</h3>
+                        <p data-en="Good"
+                           data-ar="جيد">
+                            Good
                         </p>
                     </div>
 
                 </div>
 
             </div>
+
         </div>
+
     </header>
+
 
     <!-- ================= ABOUT ================= -->
 
     <section id="about">
+
         <div class="container">
 
             <div class="section-heading">
+
                 <div class="section-label"
                      data-en="01 — About"
                      data-ar="01 — عني">
@@ -775,11 +825,14 @@
                     My goal is to combine cybersecurity knowledge with programming
                     and networking skills to develop practical and secure solutions.
                 </p>
+
             </div>
+
 
             <div class="about-grid">
 
-                <div class="glass-card">
+                <div class="card">
+
                     <h3
                         data-en="Who I Am"
                         data-ar="من أنا">
@@ -787,16 +840,19 @@
                     </h3>
 
                     <p
-                        data-en="I am a university student studying cybersecurity with a strong interest in computer networks, operating systems, programming, and security. I enjoy learning by building projects and testing concepts in practical environments."
-                        data-ar="أنا طالب جامعي أدرس الأمن السيبراني، ولدي اهتمام كبير بشبكات الحاسوب وأنظمة التشغيل والبرمجة والأمن. أحب التعلم من خلال بناء المشاريع وتجربة المفاهيم في بيئات عملية.">
-                        I am a university student studying cybersecurity with a strong
-                        interest in computer networks, operating systems, programming,
-                        and security. I enjoy learning by building projects and testing
-                        concepts in practical environments.
+                        data-en="I am a university student studying cybersecurity with an interest in computer networks, operating systems, programming, and security. I enjoy learning through practical projects and technical experimentation."
+                        data-ar="أنا طالب جامعي أدرس الأمن السيبراني، ولدي اهتمام بشبكات الحاسوب وأنظمة التشغيل والبرمجة والأمن. أحب التعلم من خلال المشاريع العملية والتجارب التقنية.">
+                        I am a university student studying cybersecurity with an
+                        interest in computer networks, operating systems,
+                        programming, and security. I enjoy learning through
+                        practical projects and technical experimentation.
                     </p>
+
                 </div>
 
-                <div class="glass-card">
+
+                <div class="card">
+
                     <h3
                         data-en="My Approach"
                         data-ar="أسلوبي">
@@ -804,24 +860,29 @@
                     </h3>
 
                     <p
-                        data-en="Learn the fundamentals, build practical projects, understand how systems work, and continuously improve through experimentation."
-                        data-ar="أتعلم الأساسيات، وأبني مشاريع عملية، وأفهم طريقة عمل الأنظمة، وأطور نفسي باستمرار من خلال التجربة.">
-                        Learn the fundamentals, build practical projects,
-                        understand how systems work, and continuously improve
-                        through experimentation.
+                        data-en="Learn the fundamentals, build projects, understand how systems work, and continuously improve through practice."
+                        data-ar="أتعلم الأساسيات، وأبني المشاريع، وأفهم طريقة عمل الأنظمة، وأطور نفسي باستمرار من خلال التطبيق العملي.">
+                        Learn the fundamentals, build projects, understand how
+                        systems work, and continuously improve through practice.
                     </p>
+
                 </div>
 
             </div>
+
         </div>
+
     </section>
+
 
     <!-- ================= ACADEMIC ================= -->
 
     <section>
+
         <div class="container">
 
             <div class="section-heading">
+
                 <div class="section-label"
                      data-en="02 — Academic Foundation"
                      data-ar="02 — الأساس الأكاديمي">
@@ -833,12 +894,16 @@
                     data-ar="معرفة في عدة مجالات تقنية.">
                     Knowledge across multiple technical areas.
                 </h2>
+
             </div>
+
 
             <div class="academic-grid">
 
                 <div class="academic-card">
+
                     <div class="icon">🛡️</div>
+
                     <h3
                         data-en="Cybersecurity"
                         data-ar="الأمن السيبراني">
@@ -847,14 +912,18 @@
 
                     <p
                         data-en="Security concepts, defensive practices, system security, and practical security labs."
-                        data-ar="مفاهيم الأمن، والممارسات الدفاعية، وأمن الأنظمة، والمختبرات الأمنية العملية.">
+                        data-ar="مفاهيم الأمن والممارسات الدفاعية وأمن الأنظمة والمختبرات الأمنية العملية.">
                         Security concepts, defensive practices, system security,
                         and practical security labs.
                     </p>
+
                 </div>
 
+
                 <div class="academic-card">
+
                     <div class="icon">🌐</div>
+
                     <h3
                         data-en="Computer Networks"
                         data-ar="شبكات الحاسوب">
@@ -863,14 +932,18 @@
 
                     <p
                         data-en="Networking fundamentals, IP addressing, routing, switching, and network design."
-                        data-ar="أساسيات الشبكات، وعناوين IP، والتوجيه، والتحويل، وتصميم الشبكات.">
+                        data-ar="أساسيات الشبكات وعناوين IP والتوجيه والتحويل وتصميم الشبكات.">
                         Networking fundamentals, IP addressing, routing,
                         switching, and network design.
                     </p>
+
                 </div>
 
+
                 <div class="academic-card">
+
                     <div class="icon">💻</div>
+
                     <h3
                         data-en="Programming"
                         data-ar="البرمجة">
@@ -883,18 +956,24 @@
                         Java and Python programming with a focus on practical
                         applications and problem solving.
                     </p>
+
                 </div>
 
             </div>
+
         </div>
+
     </section>
+
 
     <!-- ================= SKILLS ================= -->
 
     <section id="skills">
+
         <div class="container">
 
             <div class="section-heading">
+
                 <div class="section-label"
                      data-en="03 — Technical Skills"
                      data-ar="03 — المهارات التقنية">
@@ -907,96 +986,139 @@
                     Tools and technologies I work with.
                 </h2>
 
-                <p
-                    data-en="A growing technical toolkit built through university courses, labs, and personal projects."
-                    data-ar="مجموعة مهارات تقنية تتطور باستمرار من خلال المساقات الجامعية والمختبرات والمشاريع الشخصية.">
-                    A growing technical toolkit built through university courses,
-                    labs, and personal projects.
-                </p>
             </div>
+
 
             <div class="skills-grid">
 
+                <!-- Java -->
+
                 <div class="skill-card">
+
                     <div class="skill-top">
-                        <span class="skill-name">Java</span>
+
+                        <span class="skill-name">
+                            Java
+                        </span>
+
                         <span class="skill-level"
                               data-en="Proficient"
                               data-ar="متقن">
                             Proficient
                         </span>
+
                     </div>
 
                     <p
                         data-en="Object-oriented programming, GUI development, and application development."
-                        data-ar="البرمجة كائنية التوجه، وتطوير واجهات المستخدم، وتطوير التطبيقات.">
+                        data-ar="البرمجة كائنية التوجه وتطوير الواجهات والتطبيقات.">
                         Object-oriented programming, GUI development,
                         and application development.
                     </p>
+
                 </div>
 
+
+                <!-- Python -->
+
                 <div class="skill-card">
+
                     <div class="skill-top">
-                        <span class="skill-name">Python</span>
+
+                        <span class="skill-name">
+                            Python
+                        </span>
+
                         <span class="skill-level"
                               data-en="Intermediate"
                               data-ar="متوسط">
                             Intermediate
                         </span>
+
                     </div>
 
                     <p
-                        data-en="Scripting, automation, socket programming, and security-related projects."
-                        data-ar="البرمجة النصية، والأتمتة، وبرمجة Socket، والمشاريع المتعلقة بالأمن.">
-                        Scripting, automation, socket programming,
+                        data-en="Scripting, socket programming, automation, and security-related projects."
+                        data-ar="البرمجة النصية وبرمجة Socket والأتمتة والمشاريع الأمنية.">
+                        Scripting, socket programming, automation,
                         and security-related projects.
                     </p>
+
                 </div>
 
+
+                <!-- Linux -->
+
                 <div class="skill-card">
+
                     <div class="skill-top">
-                        <span class="skill-name">Linux</span>
+
+                        <span class="skill-name">
+                            Linux
+                        </span>
+
                         <span class="skill-level"
                               data-en="Working Knowledge"
                               data-ar="معرفة عملية">
                             Working Knowledge
                         </span>
+
                     </div>
 
                     <p
                         data-en="Linux command line, system administration basics, and security labs."
-                        data-ar="سطر أوامر Linux، وأساسيات إدارة الأنظمة، والمختبرات الأمنية.">
+                        data-ar="سطر أوامر Linux وأساسيات إدارة الأنظمة والمختبرات الأمنية.">
                         Linux command line, system administration basics,
                         and security labs.
                     </p>
+
                 </div>
 
+
+                <!-- Git & GitHub -->
+
                 <div class="skill-card">
+
                     <div class="skill-top">
-                        <span class="skill-name">Git & GitHub</span>
+
+                        <span class="skill-name">
+                            Git & GitHub
+                        </span>
+
                         <span class="skill-level"
                               data-en="Working Knowledge"
                               data-ar="معرفة عملية">
                             Working Knowledge
                         </span>
+
                     </div>
 
                     <p
                         data-en="Version control, repository management, code tracking, and project collaboration."
-                        data-ar="إدارة الإصدارات، وإدارة المستودعات، وتتبع تغييرات الكود، والتعاون في المشاريع.">
+                        data-ar="إدارة الإصدارات والمستودعات وتتبع تغييرات الكود والتعاون في المشاريع.">
                         Version control, repository management,
                         code tracking, and project collaboration.
                     </p>
+
                 </div>
 
+
+                <!-- Wireshark -->
+
                 <div class="skill-card">
+
                     <div class="skill-top">
-                        <span class="skill-name">Wireshark</span>
+
+                        <span class="skill-name">
+                            Wireshark
+                        </span>
+
                         <span class="skill-level"
                               data-en="Practical"
                               data-ar="عملي">
                             Practical
                         </span>
+
                     </div>
 
                     <p
@@ -1004,90 +1126,136 @@
                         data-ar="تحليل حركة الشبكة وفحص الحزم.">
                         Network traffic analysis and packet inspection.
                     </p>
+
                 </div>
 
+
+                <!-- Nmap -->
+
                 <div class="skill-card">
+
                     <div class="skill-top">
-                        <span class="skill-name">Nmap</span>
+
+                        <span class="skill-name">
+                            Nmap
+                        </span>
+
                         <span class="skill-level"
                               data-en="Practical"
                               data-ar="عملي">
                             Practical
                         </span>
+
                     </div>
 
                     <p
                         data-en="Network discovery, service enumeration, and security lab testing."
-                        data-ar="اكتشاف الشبكات، وحصر الخدمات، والاختبار داخل المختبرات الأمنية.">
+                        data-ar="اكتشاف الشبكات وحصر الخدمات والاختبار داخل المختبرات الأمنية.">
                         Network discovery, service enumeration,
                         and security lab testing.
                     </p>
+
                 </div>
 
+
+                <!-- Packet Tracer -->
+
                 <div class="skill-card">
+
                     <div class="skill-top">
-                        <span class="skill-name">Packet Tracer</span>
+
+                        <span class="skill-name">
+                            Packet Tracer
+                        </span>
+
                         <span class="skill-level"
                               data-en="Practical"
                               data-ar="عملي">
                             Practical
                         </span>
+
                     </div>
 
                     <p
                         data-en="Network topology design, routing, switching, and configuration."
-                        data-ar="تصميم طوبولوجيا الشبكات، والتوجيه، والتحويل، والإعداد.">
-                        Network topology design, routing, switching,
-                        and configuration.
+                        data-ar="تصميم الشبكات والتوجيه والتحويل والإعداد.">
+                        Network topology design, routing,
+                        switching, and configuration.
                     </p>
+
                 </div>
 
+
+                <!-- Networking -->
+
                 <div class="skill-card">
+
                     <div class="skill-top">
-                        <span class="skill-name">GitHub</span>
-                        <span class="skill-level"
-                              data-en="Project Use"
-                              data-ar="استخدام للمشاريع">
-                            Project Use
+
+                        <span class="skill-name">
+                            Networking
                         </span>
-                    </div>
 
-                    <p
-                        data-en="Hosting repositories, managing projects, and presenting development work."
-                        data-ar="استضافة المستودعات، وإدارة المشاريع، وعرض أعمال التطوير.">
-                        Hosting repositories, managing projects,
-                        and presenting development work.
-                    </p>
-                </div>
-
-                <div class="skill-card">
-                    <div class="skill-top">
-                        <span class="skill-name">Networking</span>
                         <span class="skill-level"
                               data-en="Practical"
                               data-ar="عملي">
                             Practical
                         </span>
+
                     </div>
 
                     <p
                         data-en="IP addressing, routing, switching, network segmentation, and practical network design."
-                        data-ar="عنونة IP، والتوجيه، والتحويل، وتقسيم الشبكات، وتصميم الشبكات بشكل عملي.">
-                        IP addressing, routing, switching, network segmentation,
-                        and practical network design.
+                        data-ar="عنونة IP والتوجيه والتحويل وتقسيم الشبكات وتصميم الشبكات عمليًا.">
+                        IP addressing, routing, switching,
+                        network segmentation, and practical network design.
                     </p>
+
+                </div>
+
+
+                <!-- English -->
+
+                <div class="skill-card">
+
+                    <div class="skill-top">
+
+                        <span class="skill-name">
+                            English
+                        </span>
+
+                        <span class="skill-level"
+                              data-en="Good"
+                              data-ar="جيد">
+                            Good
+                        </span>
+
+                    </div>
+
+                    <p
+                        data-en="Good English communication and ability to understand technical documentation."
+                        data-ar="مستوى جيد في اللغة الإنجليزية والقدرة على فهم المراجع والمصادر التقنية.">
+                        Good English communication and ability to understand
+                        technical documentation.
+                    </p>
+
                 </div>
 
             </div>
+
         </div>
+
     </section>
+
 
     <!-- ================= PROJECTS ================= -->
 
     <section id="projects">
+
         <div class="container">
 
             <div class="section-heading">
+
                 <div class="section-label"
                      data-en="04 — Projects"
                      data-ar="04 — المشاريع">
@@ -1106,14 +1274,20 @@
                     Selected projects that demonstrate my experience in programming,
                     networking, systems, and cybersecurity.
                 </p>
+
             </div>
+
 
             <div class="projects-grid">
 
-                <!-- Project 1 -->
+
+                <!-- PROJECT 1 -->
 
                 <div class="project-card">
-                    <div class="project-number">PROJECT_01</div>
+
+                    <div class="project-number">
+                        PROJECT_01
+                    </div>
 
                     <h3
                         data-en="Gaza International Airport System"
@@ -1122,25 +1296,39 @@
                     </h3>
 
                     <p
-                        data-en="A Java-based airport management application designed to organize airport operations and provide a structured graphical interface for managing different airport activities."
-                        data-ar="تطبيق لإدارة المطار باستخدام Java، يهدف إلى تنظيم العمليات وتوفير واجهة رسومية منظمة لإدارة الأنشطة المختلفة داخل المطار.">
+                        data-en="A Java-based airport management application designed to organize airport operations and provide a structured graphical interface for managing airport activities."
+                        data-ar="تطبيق لإدارة المطار باستخدام Java، يهدف إلى تنظيم العمليات وتوفير واجهة رسومية لإدارة الأنشطة المختلفة داخل المطار.">
                         A Java-based airport management application designed
                         to organize airport operations and provide a structured
-                        graphical interface for managing different airport activities.
+                        graphical interface for managing airport activities.
                     </p>
 
                     <div class="tags">
                         <span class="tag">Java</span>
                         <span class="tag">GUI</span>
                         <span class="tag">OOP</span>
-                        <span class="tag">Desktop Application</span>
                     </div>
+
+                    <!-- ضع رابط المشروع هنا -->
+
+                    <a href="YOUR_AIRPORT_PROJECT_LINK"
+                       target="_blank"
+                       class="project-link"
+                       data-en="View Project →"
+                       data-ar="عرض المشروع ←">
+                        View Project →
+                    </a>
+
                 </div>
 
-                <!-- Project 2 -->
+
+                <!-- PROJECT 2 -->
 
                 <div class="project-card">
-                    <div class="project-number">PROJECT_02</div>
+
+                    <div class="project-number">
+                        PROJECT_02
+                    </div>
 
                     <h3
                         data-en="Contacts & Communication System"
@@ -1160,14 +1348,26 @@
                         <span class="tag">Java</span>
                         <span class="tag">GUI</span>
                         <span class="tag">OOP</span>
-                        <span class="tag">Data Management</span>
                     </div>
+
+                    <a href="YOUR_CONTACTS_PROJECT_LINK"
+                       target="_blank"
+                       class="project-link"
+                       data-en="View Project →"
+                       data-ar="عرض المشروع ←">
+                        View Project →
+                    </a>
+
                 </div>
 
-                <!-- Project 3 -->
+
+                <!-- PROJECT 3 -->
 
                 <div class="project-card">
-                    <div class="project-number">PROJECT_03</div>
+
+                    <div class="project-number">
+                        PROJECT_03
+                    </div>
 
                     <h3
                         data-en="Medium-Scale Network Design"
@@ -1176,11 +1376,11 @@
                     </h3>
 
                     <p
-                        data-en="A practical network design project built around a central router connecting multiple network segments, with switches, end devices, and servers organized into a structured network environment."
-                        data-ar="مشروع عملي لتصميم شبكة تعتمد على راوتر مركزي يربط عدة أجزاء من الشبكة، مع Switches وأجهزة مستخدمين وServers ضمن بيئة شبكية منظمة.">
-                        A practical network design project built around a central
-                        router connecting multiple network segments, with switches,
-                        end devices, and servers organized into a structured network environment.
+                        data-en="A practical network design built around a central router connecting multiple network segments with switches, end devices, and servers."
+                        data-ar="مشروع عملي لتصميم شبكة تعتمد على راوتر مركزي يربط عدة أجزاء من الشبكة مع Switches وأجهزة مستخدمين وServers.">
+                        A practical network design built around a central router
+                        connecting multiple network segments with switches,
+                        end devices, and servers.
                     </p>
 
                     <div class="tags">
@@ -1188,14 +1388,26 @@
                         <span class="tag">Packet Tracer</span>
                         <span class="tag">Routing</span>
                         <span class="tag">Switching</span>
-                        <span class="tag">Servers</span>
                     </div>
+
+                    <a href="YOUR_NETWORK_PROJECT_LINK"
+                       target="_blank"
+                       class="project-link"
+                       data-en="View Project →"
+                       data-ar="عرض المشروع ←">
+                        View Project →
+                    </a>
+
                 </div>
 
-                <!-- Project 4 -->
+
+                <!-- PROJECT 4 -->
 
                 <div class="project-card">
-                    <div class="project-number">PROJECT_04</div>
+
+                    <div class="project-number">
+                        PROJECT_04
+                    </div>
 
                     <h3
                         data-en="Python Socket Programming"
@@ -1204,25 +1416,36 @@
                     </h3>
 
                     <p
-                        data-en="A client-server application that demonstrates network socket communication and controlled remote command execution between a client and server."
-                        data-ar="تطبيق Client-Server يوضح الاتصال باستخدام Network Sockets وتنفيذ الأوامر عن بعد بطريقة منظمة بين العميل والخادم.">
-                        A client-server application that demonstrates network
-                        socket communication and controlled remote command execution
-                        between a client and server.
+                        data-en="A client-server application demonstrating network socket communication and controlled remote command execution."
+                        data-ar="تطبيق Client-Server يوضح الاتصال باستخدام Network Sockets وتنفيذ الأوامر عن بعد بطريقة منظمة.">
+                        A client-server application demonstrating network
+                        socket communication and controlled remote command execution.
                     </p>
 
                     <div class="tags">
                         <span class="tag">Python</span>
                         <span class="tag">Sockets</span>
                         <span class="tag">Client / Server</span>
-                        <span class="tag">Networking</span>
                     </div>
+
+                    <a href="YOUR_PYTHON_PROJECT_LINK"
+                       target="_blank"
+                       class="project-link"
+                       data-en="View Project →"
+                       data-ar="عرض المشروع ←">
+                        View Project →
+                    </a>
+
                 </div>
 
-                <!-- Project 5 -->
+
+                <!-- PROJECT 5 -->
 
                 <div class="project-card">
-                    <div class="project-number">PROJECT_05</div>
+
+                    <div class="project-number">
+                        PROJECT_05
+                    </div>
 
                     <h3
                         data-en="Linux & Kali Labs"
@@ -1231,25 +1454,37 @@
                     </h3>
 
                     <p
-                        data-en="Practical laboratory work involving Linux commands, system exploration, networking utilities, and cybersecurity-oriented exercises in controlled environments."
-                        data-ar="تدريبات عملية تتضمن أوامر Linux واستكشاف الأنظمة وأدوات الشبكات وتمارين مرتبطة بالأمن السيبراني ضمن بيئات تعليمية محكومة.">
+                        data-en="Practical laboratory work involving Linux commands, system exploration, networking utilities, and cybersecurity exercises."
+                        data-ar="تدريبات عملية تتضمن أوامر Linux واستكشاف الأنظمة وأدوات الشبكات وتمارين الأمن السيبراني.">
                         Practical laboratory work involving Linux commands,
-                        system exploration, networking utilities, and cybersecurity-oriented
-                        exercises in controlled environments.
+                        system exploration, networking utilities,
+                        and cybersecurity exercises.
                     </p>
 
                     <div class="tags">
                         <span class="tag">Linux</span>
                         <span class="tag">Kali Linux</span>
-                        <span class="tag">Terminal</span>
                         <span class="tag">Cybersecurity</span>
                     </div>
+
+                    <a href="YOUR_LINUX_PROJECT_LINK"
+                       target="_blank"
+                       class="project-link"
+                       data-en="View Project →"
+                       data-ar="عرض المشروع ←">
+                        View Project →
+                    </a>
+
                 </div>
 
-                <!-- Project 6 -->
+
+                <!-- PROJECT 6 -->
 
                 <div class="project-card">
-                    <div class="project-number">PROJECT_06</div>
+
+                    <div class="project-number">
+                        PROJECT_06
+                    </div>
 
                     <h3
                         data-en="Network Analysis"
@@ -1258,31 +1493,44 @@
                     </h3>
 
                     <p
-                        data-en="Practical network analysis using tools such as Wireshark and Nmap to understand traffic, discover network services, and study network behavior."
-                        data-ar="تحليل عملي للشبكات باستخدام أدوات مثل Wireshark وNmap لفهم حركة البيانات واكتشاف الخدمات ودراسة سلوك الشبكة.">
-                        Practical network analysis using tools such as Wireshark
-                        and Nmap to understand traffic, discover network services,
+                        data-en="Practical network analysis using Wireshark and Nmap to understand traffic, discover services, and study network behavior."
+                        data-ar="تحليل عملي للشبكات باستخدام Wireshark وNmap لفهم حركة البيانات واكتشاف الخدمات ودراسة سلوك الشبكة.">
+                        Practical network analysis using Wireshark and Nmap
+                        to understand traffic, discover services,
                         and study network behavior.
                     </p>
 
                     <div class="tags">
                         <span class="tag">Wireshark</span>
                         <span class="tag">Nmap</span>
-                        <span class="tag">Packet Analysis</span>
                         <span class="tag">Networking</span>
                     </div>
+
+                    <a href="YOUR_NETWORK_ANALYSIS_LINK"
+                       target="_blank"
+                       class="project-link"
+                       data-en="View Project →"
+                       data-ar="عرض المشروع ←">
+                        View Project →
+                    </a>
+
                 </div>
 
             </div>
+
         </div>
+
     </section>
+
 
     <!-- ================= JOURNEY ================= -->
 
     <section id="journey">
+
         <div class="container">
 
             <div class="section-heading">
+
                 <div class="section-label"
                      data-en="05 — Learning Journey"
                      data-ar="05 — رحلتي التعليمية">
@@ -1295,17 +1543,13 @@
                     Learning by building.
                 </h2>
 
-                <p
-                    data-en="My development is driven by continuous learning and practical experimentation."
-                    data-ar="يعتمد تطوري على التعلم المستمر والتجربة العملية.">
-                    My development is driven by continuous learning
-                    and practical experimentation.
-                </p>
             </div>
+
 
             <div class="timeline">
 
                 <div class="timeline-item">
+
                     <span class="timeline-dot"></span>
 
                     <h3
@@ -1315,14 +1559,17 @@
                     </h3>
 
                     <p
-                        data-en="Building a strong understanding of security principles, threats, systems, and defensive concepts."
-                        data-ar="بناء فهم قوي لمبادئ الأمن والتهديدات والأنظمة والمفاهيم الدفاعية.">
+                        data-en="Building a strong understanding of security principles, systems, threats, and defensive concepts."
+                        data-ar="بناء فهم قوي لمبادئ الأمن والأنظمة والتهديدات والمفاهيم الدفاعية.">
                         Building a strong understanding of security principles,
-                        threats, systems, and defensive concepts.
+                        systems, threats, and defensive concepts.
                     </p>
+
                 </div>
 
+
                 <div class="timeline-item">
+
                     <span class="timeline-dot"></span>
 
                     <h3
@@ -1332,14 +1579,17 @@
                     </h3>
 
                     <p
-                        data-en="Developing practical knowledge of networking, routing, switching, Linux, and system administration."
-                        data-ar="تطوير معرفة عملية بالشبكات والتوجيه والتحويل وLinux وإدارة الأنظمة.">
+                        data-en="Developing practical knowledge of networking, routing, switching, Linux, and systems."
+                        data-ar="تطوير معرفة عملية بالشبكات والتوجيه والتحويل وLinux والأنظمة.">
                         Developing practical knowledge of networking,
-                        routing, switching, Linux, and system administration.
+                        routing, switching, Linux, and systems.
                     </p>
+
                 </div>
 
+
                 <div class="timeline-item">
+
                     <span class="timeline-dot"></span>
 
                     <h3
@@ -1349,14 +1599,17 @@
                     </h3>
 
                     <p
-                        data-en="Using Java and Python to transform programming concepts into real applications and networking projects."
-                        data-ar="استخدام Java وPython لتحويل مفاهيم البرمجة إلى تطبيقات حقيقية ومشاريع شبكات.">
+                        data-en="Using Java and Python to transform programming concepts into practical applications."
+                        data-ar="استخدام Java وPython لتحويل مفاهيم البرمجة إلى تطبيقات عملية.">
                         Using Java and Python to transform programming concepts
-                        into real applications and networking projects.
+                        into practical applications.
                     </p>
+
                 </div>
 
+
                 <div class="timeline-item">
+
                     <span class="timeline-dot"></span>
 
                     <h3
@@ -1371,15 +1624,20 @@
                         Continuously expanding my knowledge through projects,
                         labs, experimentation, and technical research.
                     </p>
+
                 </div>
 
             </div>
+
         </div>
+
     </section>
+
 
     <!-- ================= CONTACT ================= -->
 
     <section id="contact">
+
         <div class="container">
 
             <div class="contact-box">
@@ -1391,25 +1649,37 @@
                 </h2>
 
                 <p
-                    data-en="I am always interested in learning, collaborating on technical projects, and connecting with people who share an interest in technology and cybersecurity."
-                    data-ar="أنا مهتم دائمًا بالتعلم والتعاون في المشاريع التقنية والتواصل مع الأشخاص المهتمين بالتكنولوجيا والأمن السيبراني.">
-                    I am always interested in learning, collaborating on technical
-                    projects, and connecting with people who share an interest
-                    in technology and cybersecurity.
+                    data-en="I am interested in learning, collaborating on technical projects, and connecting with people interested in technology and cybersecurity."
+                    data-ar="أنا مهتم بالتعلم والتعاون في المشاريع التقنية والتواصل مع الأشخاص المهتمين بالتكنولوجيا والأمن السيبراني.">
+                    I am interested in learning, collaborating on technical projects,
+                    and connecting with people interested in technology and cybersecurity.
                 </p>
+
 
                 <div class="contact-links">
 
-                    <a
-                        href="https://github.com/"
-                        target="_blank"
-                        class="contact-link">
+                    <!-- ضع رابط GitHub الخاص بك -->
+
+                    <a href="YOUR_GITHUB_LINK"
+                       target="_blank"
+                       class="contact-link">
                         GitHub
                     </a>
 
-                    <a
-                        href="mailto:your-email@example.com"
-                        class="contact-link">
+
+                    <!-- ضع رابط LinkedIn الخاص بك -->
+
+                    <a href="YOUR_LINKEDIN_LINK"
+                       target="_blank"
+                       class="contact-link">
+                        LinkedIn
+                    </a>
+
+
+                    <!-- ضع إيميلك -->
+
+                    <a href="mailto:YOUR_EMAIL@example.com"
+                       class="contact-link">
                         Email
                     </a>
 
@@ -1418,7 +1688,9 @@
             </div>
 
         </div>
+
     </section>
+
 
     <!-- ================= FOOTER ================= -->
 
@@ -1437,37 +1709,59 @@
 
     </footer>
 
+
     <!-- ================= LANGUAGE SCRIPT ================= -->
 
     <script>
 
         function setLanguage(language) {
 
-            const elements = document.querySelectorAll("[data-en][data-ar]");
+            const elements =
+                document.querySelectorAll("[data-en][data-ar]");
 
             elements.forEach(element => {
-                element.textContent = element.getAttribute("data-" + language);
+
+                element.textContent =
+                    element.getAttribute("data-" + language);
+
             });
+
 
             const html = document.documentElement;
 
+
             if (language === "ar") {
+
                 html.setAttribute("lang", "ar");
                 html.setAttribute("dir", "rtl");
 
-                document.getElementById("arBtn").classList.add("active");
-                document.getElementById("enBtn").classList.remove("active");
-            }
+                document
+                    .getElementById("arBtn")
+                    .classList.add("active");
 
-            else {
+                document
+                    .getElementById("enBtn")
+                    .classList.remove("active");
+
+            } else {
+
                 html.setAttribute("lang", "en");
                 html.setAttribute("dir", "ltr");
 
-                document.getElementById("enBtn").classList.add("active");
-                document.getElementById("arBtn").classList.remove("active");
+                document
+                    .getElementById("enBtn")
+                    .classList.add("active");
+
+                document
+                    .getElementById("arBtn")
+                    .classList.remove("active");
             }
 
-            localStorage.setItem("portfolioLanguage", language);
+
+            localStorage.setItem(
+                "portfolioLanguage",
+                language
+            );
         }
 
 
@@ -1483,5 +1777,6 @@
     </script>
 
 </body>
+
 </html>
 ```
