@@ -1,0 +1,798 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>CyberSec Ahmed Khader | Cybersecurity Student</title>
+
+    <meta name="description"
+          content="Ahmed Khader - First Year Cybersecurity Student at the University College of Applied Sciences (UCAS).">
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #0a0f0d;
+            color: #e6fff0;
+            line-height: 1.6;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        /* =========================
+           Navigation
+        ========================= */
+
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            padding: 18px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            background: rgba(10, 15, 13, 0.9);
+            border-bottom: 1px solid #1f3d2d;
+
+            backdrop-filter: blur(10px);
+
+            z-index: 1000;
+        }
+
+        .logo {
+            font-size: 22px;
+            font-weight: bold;
+            color: #00ff88;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 25px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: #b8cfc2;
+            transition: 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #00ff88;
+        }
+
+        /* =========================
+           Hero Section
+        ========================= */
+
+        .hero {
+            min-height: 100vh;
+
+            display: flex;
+            align-items: center;
+
+            padding: 100px 8% 60px;
+        }
+
+        .hero-content {
+            max-width: 850px;
+        }
+
+        .terminal {
+            color: #00ff88;
+
+            font-family: monospace;
+
+            font-size: 18px;
+
+            margin-bottom: 15px;
+        }
+
+        .hero h1 {
+            font-size: clamp(42px, 7vw, 80px);
+
+            line-height: 1.1;
+
+            margin-bottom: 20px;
+        }
+
+        .hero h1 span {
+            color: #00ff88;
+        }
+
+        .hero h2 {
+            font-size: 26px;
+
+            color: #b8cfc2;
+
+            font-weight: normal;
+
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            max-width: 700px;
+
+            color: #91a99b;
+
+            font-size: 18px;
+
+            margin-bottom: 35px;
+        }
+
+        /* =========================
+           Buttons
+        ========================= */
+
+        .buttons {
+            display: flex;
+
+            gap: 15px;
+
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            padding: 12px 22px;
+
+            border: 1px solid #00ff88;
+
+            border-radius: 6px;
+
+            transition: 0.3s;
+        }
+
+        .btn-primary {
+            background: #00ff88;
+
+            color: #07100b;
+
+            font-weight: bold;
+        }
+
+        .btn-secondary {
+            color: #00ff88;
+        }
+
+        .btn:hover {
+            transform: translateY(-3px);
+
+            box-shadow:
+                0 0 20px rgba(0, 255, 136, 0.2);
+        }
+
+        /* =========================
+           Sections
+        ========================= */
+
+        section {
+            padding: 90px 8%;
+        }
+
+        .section-title {
+            font-size: 36px;
+
+            margin-bottom: 15px;
+        }
+
+        .section-title span {
+            color: #00ff88;
+        }
+
+        .section-description {
+            color: #91a99b;
+
+            max-width: 700px;
+
+            margin-bottom: 40px;
+        }
+
+        /* =========================
+           Cards
+        ========================= */
+
+        .card {
+            background: #0e1712;
+
+            border: 1px solid #1f3d2d;
+
+            border-radius: 12px;
+
+            padding: 30px;
+        }
+
+        /* =========================
+           Skills
+        ========================= */
+
+        .skills-grid {
+            display: grid;
+
+            grid-template-columns:
+                repeat(3, 1fr);
+
+            gap: 20px;
+        }
+
+        .skill-card {
+            background: #0e1712;
+
+            border: 1px solid #1f3d2d;
+
+            border-radius: 12px;
+
+            padding: 25px;
+
+            transition: 0.3s;
+        }
+
+        .skill-card:hover {
+            transform: translateY(-5px);
+
+            border-color: #00ff88;
+
+            box-shadow:
+                0 0 25px rgba(0, 255, 136, 0.08);
+        }
+
+        .skill-icon {
+            font-size: 32px;
+
+            margin-bottom: 15px;
+        }
+
+        .skill-card h3 {
+            color: #00ff88;
+
+            margin-bottom: 10px;
+        }
+
+        .skill-card p {
+            color: #91a99b;
+
+            font-size: 14px;
+        }
+
+        /* =========================
+           Footer
+        ========================= */
+
+        footer {
+            text-align: center;
+
+            padding: 30px;
+
+            border-top: 1px solid #1f3d2d;
+
+            color: #71877a;
+        }
+
+        /* =========================
+           Responsive Design
+        ========================= */
+
+        @media (max-width: 900px) {
+
+            .skills-grid {
+                grid-template-columns:
+                    repeat(2, 1fr);
+            }
+
+        }
+
+        @media (max-width: 700px) {
+
+            .nav-links {
+                display: none;
+            }
+
+            .hero {
+                padding-top: 130px;
+            }
+
+            section {
+                padding: 70px 6%;
+            }
+
+        }
+
+        @media (max-width: 600px) {
+
+            .skills-grid {
+                grid-template-columns: 1fr;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+
+    <!-- =========================
+         Navigation
+    ========================== -->
+
+    <nav>
+
+        <div class="logo">
+            &lt;CyberSec /&gt;
+        </div>
+
+        <ul class="nav-links">
+
+            <li>
+                <a href="#about">
+                    About
+                </a>
+            </li>
+
+            <li>
+                <a href="#education">
+                    Education
+                </a>
+            </li>
+
+            <li>
+                <a href="#skills">
+                    Skills
+                </a>
+            </li>
+
+            <li>
+                <a href="#projects">
+                    Projects
+                </a>
+            </li>
+
+        </ul>
+
+    </nav>
+
+
+    <!-- =========================
+         Hero Section
+    ========================== -->
+
+    <header class="hero">
+
+        <div class="hero-content">
+
+            <div class="terminal">
+                &gt; whoami
+            </div>
+
+            <h1>
+                Ahmed <span>Khader</span>
+            </h1>
+
+            <h2>
+                Cybersecurity Student
+            </h2>
+
+            <p>
+
+                First-year Cybersecurity student at the
+                University College of Applied Sciences (UCAS),
+                building a strong foundation in programming,
+                computer networks, Linux, and cybersecurity.
+
+            </p>
+
+            <div class="buttons">
+
+                <a
+                    href="#projects"
+                    class="btn btn-primary"
+                >
+                    View Projects
+                </a>
+
+                <a
+                    href="https://github.com/CyberSec-Ahmed-Khader"
+                    class="btn btn-secondary"
+                    target="_blank"
+                >
+                    GitHub
+                </a>
+
+            </div>
+
+        </div>
+
+    </header>
+
+
+    <!-- =========================
+         About Section
+    ========================== -->
+
+    <section id="about">
+
+        <h2 class="section-title">
+            About <span>Me</span>
+        </h2>
+
+        <p class="section-description">
+
+            A first-year student exploring cybersecurity
+            through programming, networking, Linux, and
+            hands-on technical projects.
+
+        </p>
+
+        <div class="card">
+
+            <p>
+
+                I am currently studying Cybersecurity at the
+                University College of Applied Sciences (UCAS).
+
+                My goal is to develop strong technical skills,
+                strengthen my cybersecurity knowledge, and gain
+                practical experience through projects and labs.
+
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         Education Section
+    ========================== -->
+
+    <section id="education">
+
+        <h2 class="section-title">
+            <span>Education</span>
+        </h2>
+
+        <div class="card">
+
+            <h3>
+                University College of Applied Sciences
+            </h3>
+
+            <p>
+                Cybersecurity — First Year
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         Skills Section
+    ========================== -->
+
+    <section id="skills">
+
+        <h2 class="section-title">
+            Technical <span>Skills</span>
+        </h2>
+
+        <p class="section-description">
+
+            Skills and fundamentals I am developing as a
+            first-year Cybersecurity student.
+
+        </p>
+
+
+        <div class="skills-grid">
+
+
+            <!-- Python -->
+
+            <div class="skill-card">
+
+                <div class="skill-icon">
+                    🐍
+                </div>
+
+                <h3>
+                    Python
+                </h3>
+
+                <p>
+                    Programming fundamentals and basic scripting.
+                </p>
+
+            </div>
+
+
+            <!-- Networking -->
+
+            <div class="skill-card">
+
+                <div class="skill-icon">
+                    🌐
+                </div>
+
+                <h3>
+                    Computer Networking
+                </h3>
+
+                <p>
+                    Basic networking concepts, protocols,
+                    IP addressing and network communication.
+                </p>
+
+            </div>
+
+
+            <!-- Linux -->
+
+            <div class="skill-card">
+
+                <div class="skill-icon">
+                    🐧
+                </div>
+
+                <h3>
+                    Linux
+                </h3>
+
+                <p>
+                    Linux fundamentals, terminal commands
+                    and basic system administration.
+                </p>
+
+            </div>
+
+
+            <!-- Cybersecurity -->
+
+            <div class="skill-card">
+
+                <div class="skill-icon">
+                    🛡️
+                </div>
+
+                <h3>
+                    Cybersecurity Fundamentals
+                </h3>
+
+                <p>
+                    Basic security concepts, threats,
+                    vulnerabilities and defensive practices.
+                </p>
+
+            </div>
+
+
+            <!-- Nmap -->
+
+            <div class="skill-card">
+
+                <div class="skill-icon">
+                    🔎
+                </div>
+
+                <h3>
+                    Nmap
+                </h3>
+
+                <p>
+                    Basic network scanning and service discovery
+                    in authorized lab environments.
+                </p>
+
+            </div>
+
+
+            <!-- Wireshark -->
+
+            <div class="skill-card">
+
+                <div class="skill-icon">
+                    🦈
+                </div>
+
+                <h3>
+                    Wireshark
+                </h3>
+
+                <p>
+                    Basic packet analysis and understanding
+                    network traffic.
+                </p>
+
+            </div>
+
+
+            <!-- Packet Tracer -->
+
+            <div class="skill-card">
+
+                <div class="skill-icon">
+                    🖥️
+                </div>
+
+                <h3>
+                    Cisco Packet Tracer
+                </h3>
+
+                <p>
+                    Building and configuring basic computer
+                    networks and network devices.
+                </p>
+
+            </div>
+
+
+            <!-- Command Line -->
+
+            <div class="skill-card">
+
+                <div class="skill-icon">
+                    ⌨️
+                </div>
+
+                <h3>
+                    Command Line
+                </h3>
+
+                <p>
+                    Working with Windows PowerShell, CMD
+                    and Linux Terminal.
+                </p>
+
+            </div>
+
+
+            <!-- English -->
+
+            <div class="skill-card">
+
+                <div class="skill-icon">
+                    🇬🇧
+                </div>
+
+                <h3>
+                    English
+                </h3>
+
+                <p>
+                    Good command of English with the ability
+                    to understand technical and cybersecurity content.
+                </p>
+
+            </div>
+
+
+            <!-- Technical Learning -->
+
+            <div class="skill-card">
+
+                <div class="skill-icon">
+                    📚
+                </div>
+
+                <h3>
+                    Technical Learning
+                </h3>
+
+                <p>
+                    Reading technical documentation and learning
+                    through practical labs.
+                </p>
+
+            </div>
+
+
+            <!-- Problem Solving -->
+
+            <div class="skill-card">
+
+                <div class="skill-icon">
+                    🧠
+                </div>
+
+                <h3>
+                    Problem Solving
+                </h3>
+
+                <p>
+                    Analyzing technical problems and finding
+                    practical solutions.
+                </p>
+
+            </div>
+
+
+            <!-- Git -->
+
+            <div class="skill-card">
+
+                <div class="skill-icon">
+                    🔧
+                </div>
+
+                <h3>
+                    Git & GitHub
+                </h3>
+
+                <p>
+                    Basic version control and managing
+                    programming projects.
+                </p>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         Projects Section
+    ========================== -->
+
+    <section id="projects">
+
+        <h2 class="section-title">
+            My <span>Projects</span>
+        </h2>
+
+        <p class="section-description">
+
+            Practical projects and labs developed throughout
+            my cybersecurity learning journey.
+
+        </p>
+
+        <div class="card">
+
+            <h3>
+                Coming Soon...
+            </h3>
+
+            <p>
+
+                Projects will be added here as I continue
+                learning and building.
+
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         Footer
+    ========================== -->
+
+    <footer>
+
+        <p>
+            © 2026 Ahmed Khader — Cybersecurity Student
+        </p>
+
+    </footer>
+
+
+</body>
+</html>
